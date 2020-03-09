@@ -1,0 +1,11 @@
+---
+# https://www.home-assistant.io/integrations/recorder/
+#
+purge_keep_days: 7
+exclude:
+  domains:
+    - calendar
+    - media_player
+    - sun
+    - updater
+    - weather

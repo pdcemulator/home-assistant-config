@@ -1,0 +1,38 @@
+---
+cards:
+  - entities:
+      - sensor.temperatur_eg_har
+      - sensor.temperatur_eg_bad
+      - sensor.temperatur_eg_arbeiten
+      - sensor.temperatur_eg_essen
+      - sensor.temperatur_eg_wohnen
+      - sensor.temperatur_eg_flur
+    title: EG
+    type: entities
+    show_header_toggle: false
+  - entities:
+      - sensor.temperatur_og_kind_i
+      - sensor.temperatur_og_kind_ii
+      - sensor.temperatur_og_bad
+      - sensor.temperatur_og_ankleide
+      - sensor.temperatur_og_schlafen
+      - sensor.temperatur_og_flur
+    title: OG
+    type: entities
+    show_header_toggle: false
+  - entities:
+      - sensor.temperatur_dach
+      - sensor.temperatur_aussen_fassade_n
+      - sensor.temperatur_aussen_ws
+    title: Dach und Außen
+    type: entities
+    show_header_toggle: false
+  - entities:
+      - sensor.hpsu_t_ext
+      - sensor.hpsu_t_hs
+      - sensor.hpsu_t_dhw1
+    title: HPSU
+    type: entities
+    show_header_toggle: false
+icon: 'mdi:thermometer'
+title: Temperatur

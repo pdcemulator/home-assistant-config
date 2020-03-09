@@ -1,0 +1,14 @@
+---
+# https://www.home-assistant.io/integrations/person/
+
+- name: Papa
+  id: person_papa
+  user_id: 6964966623ad4a478e50d2981bba12bb
+  device_trackers:
+    - device_tracker.iphone_2
+- name: Mama
+  id: person_mama
+  device_trackers:
+    - device_tracker.huaweip20
+- name: Gast
+  id: person_gast

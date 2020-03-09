@@ -1,0 +1,27 @@
+---
+
+- alias: set_theme_day
+  trigger:
+    platform: time_pattern
+    minutes: "/5"
+  condition:
+    condition: state
+    entity_id: binary_sensor.tag_nacht
+    state: 'on'
+  action:
+    service: frontend.set_theme
+    data:
+      name: default
+
+- alias: set_theme_night
+  trigger:
+    platform: time_pattern
+    minutes: "/5"
+  condition:
+    condition: state
+    entity_id: binary_sensor.tag_nacht
+    state: 'off'
+  action:
+    service: frontend.set_theme
+    data:
+      name: 'Google Dark Theme'

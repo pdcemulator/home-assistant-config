@@ -1,0 +1,87 @@
+---
+icon: 'mdi:home'
+id: 0
+title: Status
+panel: true
+cards:
+
+  ## COLUMN 1 ##
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    - type: glance
+      show_name: false
+      entities:
+        - person.papa
+        - person.mama
+
+    - type: horizontal-stack
+      cards:
+      - type: sensor
+        name: Aussen
+        graph: line
+        entity: sensor.temperatur_aussen_fassade_n
+      - type: sensor
+        name: Wohnen
+        graph: line
+        entity: sensor.temperatur_eg_wohnen
+    - type: horizontal-stack
+      cards:
+      - type: sensor
+        name: Aussen
+        graph: line
+        entity: sensor.aussen_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - type: sensor
+        name: Warmwasser
+        graph: line
+        entity: sensor.hpsu_t_dhw1
+        detail: 2
+    - break
+
+    ## COLUMN 2 ##
+    # bright meteogram on day
+    - type: conditional
+      conditions:
+        - entity: binary_sensor.tag_nacht
+          state: 'on'
+      card:
+        type: picture
+        image: !secret url_meteogram_day
+    # dark meteogram on night
+    - type: conditional
+      conditions:
+        - entity: binary_sensor.tag_nacht
+          state_not: 'on'
+      card:
+        type: picture
+        image: !secret url_meteogram_night
+
+    - type: entity-filter
+      name: Fenster geöffnet
+      entities:
+        - binary_sensor.fenster_eg_har
+        - binary_sensor.fenster_eg_bad
+        - binary_sensor.fenster_eg_arbeiten_s
+        - binary_sensor.fenster_eg_arbeiten_w
+        - binary_sensor.fenster_eg_kueche
+        - binary_sensor.tuer_eg_essen
+        - binary_sensor.tuer_eg_wohnen_l
+        - binary_sensor.tuer_eg_wohnen_r
+      show_empty: false
+      state_filter:
+        - 'on'
+    - break
+
+    ## COLUMN 3 ##
+    - type: custom:calendar-card
+      title: 'Kalender'
+      entities: !secret caldav_calendars
+      timeFormat: HH:mm
+      showLocation: true
+      showLocationIcon: false
+      showMultiDay: false
+      showEventOrigin: true
+      highlightToday: true
+      hidePastEvents: true
+      eventsLimit: 8        

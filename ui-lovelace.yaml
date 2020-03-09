@@ -1,0 +1,26 @@
+---
+title: Home
+excluded_entities: null
+background: var(--background-image)
+resources: !include_dir_list lovelace/resources
+
+custom_header:
+  locale: de-DE
+  compact_mode: true
+  exceptions:
+    - conditions:
+        user: visu
+      config:
+        disable_sidebar: true
+        button_text:
+          options: '{{ hours24LZ }}:{{ minutesLZ }}'
+
+views:
+  - !include lovelace/views/main.yaml
+  - !include lovelace/views/light.yaml
+  - !include lovelace/views/cover.yaml
+  - !include lovelace/views/socket.yaml
+  - !include lovelace/views/temperature.yaml
+  - !include lovelace/views/humidity.yaml
+  - !include lovelace/views/window.yaml
+  - !include lovelace/views/mediaplayer.yaml

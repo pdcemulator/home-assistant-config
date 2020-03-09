@@ -1,0 +1,5 @@
+---
+person.papa:
+  entity_picture: '/local/persons/papa.jpg'
+person.mama:
+  entity_picture: '/local/persons/mama.jpg'

@@ -1,0 +1,35 @@
+---
+# https://www.home-assistant.io/integrations/binary_sensor.mqtt/
+
+#ToDO: fully id to secrets
+binary_sensor:
+  ### HPSU ###
+  - platform: mqtt
+    name: HPSU Ext
+    state_topic: 'hpsu/ext'
+    payload_on: 2
+    payload_off: 1
+  - platform: mqtt
+    name: HPSU Status Pump
+    state_topic: 'hpsu/status_pump'
+    payload_on: 1
+    payload_off: 0
+  ### Shelly ###
+  - platform: mqtt
+    state_topic: 'shellies/shellyflood-F2B145/sensor/flood'
+    name: 'Shelly Feuchtigkeit HAR'
+    payload_on: 'true'
+    payload_off: 'false'
+    device_class: moisture
+  - platform: mqtt
+    state_topic: 'shellies/shellyflood-F2B315/sensor/flood'
+    name: 'Shelly Feuchtigkeit Kueche Spuele'
+    payload_on: 'true'
+    payload_off: 'false'
+    device_class: moisture
+  - platform: mqtt
+    state_topic: 'shellies/shellyflood-F2B1F9/sensor/flood'
+    name: 'Shelly Feuchtigkeit Kueche GS'
+    payload_on: 'true'
+    payload_off: 'false'
+    device_class: moisture

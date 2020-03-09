@@ -1,0 +1,39 @@
+---
+cards:
+  - entities:
+      - light.eg_har
+      - light.eg_bad
+      - light.eg_bad_spiegel
+      - light.eg_arbeiten
+      - light.eg_kueche
+      - light.eg_kueche_schrank
+      - light.eg_essen
+      - light.eg_wohnen
+      - light.eg_flur
+    title: EG
+    type: entities
+  - entities:
+      - light.og_kind_i
+      - light.og_kind_ii
+      - light.og_bad
+      - light.og_bad_dusche
+      - light.og_bad_spiegel
+      - light.og_ankleide
+      - light.og_schlafen
+      - light.og_flur
+      - light.og_treppe
+    title: OG
+    type: entities
+  - entities:
+      - light.dach
+    title: Dach
+    type: entities
+  - entities:
+      - light.eingang
+      - light.terasse_w
+      - light.terasse_n
+      - light.carport
+    title: Außen
+    type: entities
+icon: 'mdi:lightbulb'
+title: Licht

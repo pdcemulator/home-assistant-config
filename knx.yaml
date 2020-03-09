@@ -1,0 +1,103 @@
+---
+# The KNX integration for Home Assistant allows you to connect to a KNX/IP devices.
+#
+# https://www.home-assistant.io/integrations/knx/
+#
+tunneling:
+  host: !secret knx_host
+  port: !secret knx_port
+  local_ip: !secret knx_local_ip
+  #fire_event: true
+  #fire_event_filter: ['3/7/*']
+
+# KNX integration is able to expose time or sensor values to KNX bus.
+# The integration will broadcast any change of the exposed value to the 
+# KNX bus and answer read requests to the specified group address
+#
+# https://www.home-assistant.io/integrations/knx/#exposing-sensor-values-or-time-to-knx-bus
+#
+expose:
+  #- entity_id: sensor.hpsu_mode
+  #  type: ?
+  #  address: '3/7/1'
+  - entity_id: sensor.hpsu_t_ext
+    type: temperature
+    address: '3/7/2'
+  - entity_id: sensor.hpsu_ehs
+    type: power
+    address: '3/7/3'
+  - entity_id: binary_sensor.hpsu_status_pump
+    type: binary
+    address: '3/7/4'
+  - entity_id: sensor.hpsu_pump
+    type: percent
+    address: '3/7/5'
+  - entity_id: sensor.hpsu_flow_rate
+    type: DPT-9
+    address: '3/7/6'
+  - entity_id: sensor.hpsu_bpv
+    type: percent
+    address: '3/7/7'
+  - entity_id: sensor.hpsu_posmix
+    type: percent
+    address: '3/7/8'
+  - entity_id: sensor.hpsu_t_dhw1
+    type: temperature
+    address: '3/7/9'
+  - entity_id: sensor.hpsu_tdhw2
+    type: temperature
+    address: '3/7/10'
+  - entity_id: sensor.hpsu_t_v1
+    type: temperature
+    address: '3/7/11'
+  - entity_id: sensor.hpsu_t_hs
+    type: temperature
+    address: '3/7/12'
+  - entity_id: sensor.hpsu_t_vbh
+    type: temperature
+    address: '3/7/13'
+  - entity_id: sensor.hpsu_tvbh2
+    type: temperature
+    address: '3/7/14'
+  - entity_id: sensor.hpsu_t_return
+    type: temperature
+    address: '3/7/15'
+  - entity_id: sensor.hpsu_t_r1
+    type: temperature
+    address: '3/7/16'
+  - entity_id: sensor.hpsu_tliq2
+    type: temperature
+    address: '3/7/17'
+  - entity_id: sensor.hpsu_t_ext
+    type: temperature
+    address: '3/7/18'
+  - entity_id: sensor.hpsu_runtime_comp
+    type: DPT-7
+    address: '3/7/19'
+  - entity_id: sensor.hpsu_qboh
+    type: DPT-13
+    address: '3/7/20'
+  - entity_id: sensor.hpsu_qbchhp
+    type: DPT-13
+    address: '3/7/21'
+  - entity_id: sensor.hpsu_qsc
+    type: DPT-13
+    address: '3/7/22'
+  - entity_id: sensor.hpsu_qch
+    type: DPT-13
+    address: '3/7/23'
+  - entity_id: sensor.hpsu_qwp
+    type: DPT-13
+    address: '3/7/24'
+  - entity_id: sensor.hpsu_qdhw
+    type: DPT-13
+    address: '3/7/25'
+  - entity_id: sensor.hpsu_v1
+    type: DPT-9
+    address: '3/7/26'
+  - entity_id: sensor.hpsu_t_dhw_setpoint1
+    type: temperature
+    address: '3/7/27'
+  - entity_id: sensor.hpsu_t_hs_set
+    type: temperature
+    address: '3/7/28'

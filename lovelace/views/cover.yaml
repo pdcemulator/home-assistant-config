@@ -1,0 +1,46 @@
+---
+cards:
+  - entities:
+      - entity: cover.eg_har
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_bad
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_arbeiten_s
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_arbeiten_w
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_kueche
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_essen
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_wohnen_l
+        icon: 'mdi:window-shutter'
+      - entity: cover.eg_wohnen_r
+        icon: 'mdi:window-shutter'
+    title: EG
+    type: entities
+    show_header_toggle: false
+  - entities:
+      - entity: cover.og_kind_i_o
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_kind_i_s
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_kind_ii_s
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_kind_ii_w
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_bad
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_ankleide
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_schlafen_n
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_schlafen_o
+        icon: 'mdi:window-shutter'
+      - entity: cover.og_treppe
+        icon: 'mdi:window-shutter'
+    title: OG
+    type: entities
+    show_header_toggle: false
+icon: 'mdi:window-shutter'
+title: Rolladen

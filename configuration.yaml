@@ -1,0 +1,88 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 300
+  unit_system: metric
+  time_zone: Europe/Berlin
+  name: Home
+  customize: !include customize.yaml
+  packages: !include_dir_named packages
+
+automation: !include_dir_merge_list automations
+
+# https://www.home-assistant.io/integrations/caldav/
+calendar:
+  - platform: caldav
+    username: !secret caldav_username
+    password: !secret caldav_password
+    url: !secret caldav_url
+
+# https://www.nabucasa.com/config/
+cloud:
+
+# https://www.home-assistant.io/integrations/discovery/
+discovery:
+  ignore:
+    - homekit
+    - sonos
+
+# https://www.home-assistant.io/integrations/frontend/
+frontend:
+  javascript_version: auto
+  themes: !include_dir_merge_named themes
+
+group: !include entities/groups.yaml
+
+# https://www.home-assistant.io/integrations/http/
+http:
+  use_x_forwarded_for: true
+  ip_ban_enabled: true
+  login_attempts_threshold: 3
+  trusted_proxies: !secret http_trusted_proxies
+
+knx: !include knx.yaml
+
+# https://www.home-assistant.io/lovelace/yaml-mode/
+lovelace:
+  mode: yaml
+
+# https://www.home-assistant.io/docs/mqtt/
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  #client_id: home-assistant
+
+person: !include entities/persons.yaml
+recorder: !include recorder.yaml
+scene: !include entities/scenes.yaml
+script: !include entities/scripts.yaml
+
+# https://www.home-assistant.io/integrations/sonos/
+sonos: 
+  media_player:
+    hosts: !secret sonos_hosts
+
+# https://www.home-assistant.io/integrations/google_translate/
+tts:
+  - platform: google_translate
+    language: 'de'
+
+# https://www.home-assistant.io/integrations/weather.darksky/
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    #name: !secret darksky_name
+    mode: daily
+
+zone: !include_dir_list entities/zones
+
+logger:
+  default: warning
+  #logs:
+  #  xknx: debug

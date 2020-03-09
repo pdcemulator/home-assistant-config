@@ -1,0 +1,50 @@
+---
+cards:
+  - title: Luftfeuchte relativ
+    type: entities
+    show_header_toggle: false
+    entities:
+      - entity: sensor.eg_wohnen_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_kind_i_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_bad_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_schlafen_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - entity: sensor.dach_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+      - entity: sensor.aussen_luftfeuchte_rel
+        icon: 'mdi:water-percent'
+  - title: Luftfeuchte absolut
+    type: entities
+    show_header_toggle: false
+    entities:
+      - entity: sensor.eg_wohnen_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_kind_i_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_bad_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+      - entity: sensor.og_schlafen_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+      - entity: sensor.dach_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+      - entity: sensor.aussen_luftfeuchte_abs
+        icon: 'mdi:water-percent'
+  - title: Helligkeit
+    type: entities
+    show_header_toggle: false
+    entities:
+      - sensor.helligkeit_eg_bad
+      - sensor.helligkeit_eg_flur
+      - sensor.helligkeit_og_bad
+      - sensor.helligkeit_og_ankleide
+      - sensor.helligkeit_og_flur
+      - sensor.helligkeit_fassade_o
+      - sensor.helligkeit_fassade_s
+      - sensor.helligkeit_fassade_w
+      - sensor.helligkeit_carport
+      - sensor.windgeschwindigkeit
+icon: 'mdi:water-percent'
+title: Luftfeuchte

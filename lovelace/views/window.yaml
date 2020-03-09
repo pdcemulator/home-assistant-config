@@ -1,0 +1,23 @@
+---
+cards:
+  - entities:
+      - binary_sensor.fenster_eg_har
+      - binary_sensor.fenster_eg_bad
+      - binary_sensor.fenster_eg_arbeiten_s
+      - binary_sensor.fenster_eg_arbeiten_w
+      - binary_sensor.fenster_eg_kueche
+      - binary_sensor.tuer_eg_essen
+      - binary_sensor.tuer_eg_wohnen_l
+      - binary_sensor.tuer_eg_wohnen_r
+      - binary_sensor.tuer_eg_abstellkammer
+      - binary_sensor.haustuer
+    title: EG
+    type: entities
+    show_header_toggle: false
+  - entities:
+      - binary_sensor.og_dachluke
+    title: OG
+    type: entities
+    show_header_toggle: false
+icon: 'mdi:window-closed'
+title: Fenster

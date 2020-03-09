@@ -1,0 +1,17 @@
+---
+
+- alias: Turn Visu Screen On
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bewegung_eg_flur
+    to: 'on'
+  action:
+    - service: rest_command.visu_screen_on
+
+- alias: Turn Visu Screen Off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bewegung_eg_flur
+    to: 'off'
+  action:
+    - service: rest_command.visu_screen_off

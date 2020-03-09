@@ -1,0 +1,12 @@
+---
+cards:
+  - type: media-control
+    entity: media_player.arbeiten
+  - type: media-control
+    entity: media_player.kuche
+  - type: media-control
+    entity: media_player.wohnen
+  - type: media-control
+    entity: media_player.bad
+icon: 'mdi:music'
+title: Sonos

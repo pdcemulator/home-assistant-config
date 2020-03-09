@@ -1,0 +1,33 @@
+---
+cards:
+  - title: EG
+    type: entities
+    entities:
+      - switch.eg_har_sd_fenster
+      - switch.eg_bad_sd_fenster
+      - switch.eg_arbeiten_sd_fenster_s
+      - switch.eg_arbeiten_sd_fenster_w
+      - switch.eg_kueche_sd_fenster
+      - switch.eg_essen_sd_tuer
+      - switch.eg_essen_sd_weihnachtsbaum
+      - switch.eg_wohnen_sd_tuer_l
+      - switch.eg_wohnen_sd_tuer_r
+  - title: OG
+    type: entities
+    entities:
+      - switch.og_kind_i_sd_fenster
+      - switch.og_kind_ii_sd_fenster
+      - switch.og_bad_sd_fenster
+      - switch.og_bad_sd_sonos
+      - switch.og_bad_sd_heizung
+      - switch.og_ankleide_sd_fenster
+      - switch.og_schlafen_sd_fenster
+      - switch.og_treppe_sd_fenster
+  - title: Aussen
+    type: entities
+    entities:
+      - switch.terasse_sd
+      - switch.carport_sd_beleuchtung
+      - switch.carport_sd_seite
+icon: 'mdi:power-socket-de'
+title: Steckdosen
