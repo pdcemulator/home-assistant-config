@@ -63,14 +63,14 @@ My house runs with the KNX bus system. The majority of the automations are imple
 
 ## <a name="network">Network</a>
 | Device  | Connection | Notes |
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | [Ubiquiti USG](https://www.ui.com/unifi-routing/usg/)| Ethernet | Router |
 | [Ubiquiti USW](https://www.ui.com/unifi-switching/unifi-switch-poe/)| Ethernet | Switch |
 | [Ubiquiti UAP AC Lite](https://www.ui.com/unifi/unifi-ap-ac-lite/)| Ethernet/Wifi | Access Point |
 
 ## <a name="other">Other</a>
 | Device  | Connection | Notes |
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | [Elabnet Timberwolf 950Q](https://shop.wiregate.de/aktion/multifunktionsgateway/timberwolf-hutschiene/timberwolf-server-950-art-nr-517.html) | KNX / Ethernet / 1-Wire | KNX IP Interface, 1-Wire Gateway, Logic Server |
 | [MDT SCN-LOG1](https://www.mdt.de/EN_Logical_Module.html) | KNX | Logic Module |
 | [MDT SCN-LK001](https://www.mdt.de/EN_Interfaces.html) | KNX | Line Coupler |
@@ -83,7 +83,7 @@ My house runs with the KNX bus system. The majority of the automations are imple
 
 # <a name="software">Software</a>
 | Device  | Home Assistant | Notes |
-| ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | [Mosquitto MQTT Broker](https://mosquitto.org/) | [MQTT](https://www.home-assistant.io/integrations/mqtt/) | running in Docker Container |
 | [pyHPSU](https://github.com/Spanni26/pyHPSU) | [MQTT](https://www.home-assistant.io/integrations/mqtt/) | send values (temperature, mode etc) from my Heat Pump to HA |
 | [Fully Kiosk Browser](https://www.ozerov.de/fully-kiosk-browser/) | [Rest Command](https://www.home-assistant.io/integrations/rest_command/) | power on / off tablet display when movement is detected |
