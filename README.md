@@ -2,7 +2,7 @@
 This is my [Home Assistant Core](https://home-assistant.io) configuration.
 My house runs with the KNX bus system. The majority of the automations are implemented inside KNX system. I use HA to connect other systems.
 
-# Content
+# Contents
 * [Hardware](#hardware)
   * [Binary Sensor](#binary_sensor)
   * [Cover](#cover)

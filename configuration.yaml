@@ -80,7 +80,7 @@ weather:
     #name: !secret darksky_name
     mode: daily
 
-zone: !include_dir_list entities/zones
+#zone: !include_dir_list entities/zones
 
 logger:
   default: warning
