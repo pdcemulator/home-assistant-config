@@ -46,6 +46,11 @@ http:
 
 knx: !include knx.yaml
 
+logger:
+  default: warning
+  logs:
+    xknx: warning
+
 # https://www.home-assistant.io/lovelace/yaml-mode/
 lovelace:
   mode: yaml
@@ -81,8 +86,3 @@ weather:
     mode: daily
 
 #zone: !include_dir_list entities/zones
-
-logger:
-  default: warning
-  #logs:
-  #  xknx: debug

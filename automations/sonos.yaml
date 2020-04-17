@@ -1,0 +1,60 @@
+---
+
+- alias: Sonos OG Bad On
+  trigger:
+    platform: event
+    event_type: knx_event
+    event_data:
+      address: '1/1/230'
+      data: 1
+  action:
+    service: media_player.media_play
+    entity_id: media_player.bad
+
+- alias: Sonos OG Bad Off
+  trigger:
+    platform: event
+    event_type: knx_event
+    event_data:
+      address: '1/1/230'
+      data: 0
+  action:
+    service: media_player.media_pause
+    entity_id: media_player.bad
+
+- alias: Sonos OG Bad Volume Up
+  trigger:
+    platform: event
+    event_type: knx_event
+    event_data:
+      address: '1/2/230'
+      data: 9
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.sonos_volume_change_stop
+    - service: script.turn_on
+      entity_id: script.sonos_og_bad_vol_up
+
+- alias: Sonos OG Bad Volume Down
+  trigger:
+    platform: event
+    event_type: knx_event
+    event_data:
+      address: '1/2/230'
+      data: 1
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.sonos_volume_change_stop
+    - service: script.turn_on
+      entity_id: script.sonos_og_bad_vol_down
+
+- alias: Sonos OG Bad Volume Change Stop
+  trigger:
+    platform: event
+    event_type: knx_event
+    event_data:
+      address: '1/2/230'
+      data: 0
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.sonos_volume_change_stop

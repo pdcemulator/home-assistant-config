@@ -7,8 +7,9 @@ tunneling:
   host: !secret knx_host
   port: !secret knx_port
   local_ip: !secret knx_local_ip
-  #fire_event: true
-  #fire_event_filter: ['3/7/*']
+  
+fire_event: true
+fire_event_filter: ['1/1/230', '1/2/230']
 
 # KNX integration is able to expose time or sensor values to KNX bus.
 # The integration will broadcast any change of the exposed value to the 
@@ -101,3 +102,10 @@ expose:
   - entity_id: sensor.hpsu_t_hs_set
     type: temperature
     address: '3/7/28'
+    # send Sonos values to KNX bus
+  - entity_id: sensor.sonos_og_bad_volume
+    type: percent
+    address: '1/5/230'
+  - entity_id: sensor.sonos_og_bad_state
+    type: binary
+    address: '1/4/230'

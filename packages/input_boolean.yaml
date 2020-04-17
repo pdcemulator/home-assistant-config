@@ -7,3 +7,6 @@ input_boolean:
   gast:
     initial: false
     icon: 'mdi:account'
+  sonos_volume_change_stop:
+    initial: false
+    icon: 'mdi:stop'

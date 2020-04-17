@@ -1,0 +1,48 @@
+---
+# https://www.home-assistant.io/docs/scripts/
+
+sonos_og_bad_vol_up:
+  sequence:
+    - service: media_player.volume_up
+      data_template:
+        entity_id: media_player.bad
+    - service: script.turn_on
+      data_template:
+        entity_id: script.sonos_og_bad_vol_up_loop
+
+sonos_og_bad_vol_up_loop:
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.sonos_og_bad_vol_up
+    - condition: state
+      entity_id: input_boolean.sonos_volume_change_stop
+      state: 'off'
+    - delay:
+        milliseconds: 400
+    - service: script.turn_on
+      data_template:
+        entity_id: script.sonos_og_bad_vol_up
+
+sonos_og_bad_vol_down:
+  sequence:
+    - service: media_player.volume_down
+      data_template:
+        entity_id: media_player.bad
+    - service: script.turn_on
+      data_template:
+        entity_id: script.sonos_og_bad_vol_down_loop
+
+sonos_og_bad_vol_down_loop:
+  sequence:
+    - service: script.turn_off
+      data:
+        entity_id: script.sonos_og_bad_vol_down
+    - condition: state
+      entity_id: input_boolean.sonos_volume_change_stop
+      state: 'off'
+    - delay:
+        milliseconds: 400
+    - service: script.turn_on
+      data_template:
+        entity_id: script.sonos_og_bad_vol_down
