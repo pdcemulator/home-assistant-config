@@ -1,9 +1,12 @@
 ---
 
+# set default theme on day
 - alias: set_theme_day
   trigger:
-    platform: time_pattern
-    minutes: "/5"
+    - platform: homeassistant
+      event: start
+    - platform: time_pattern
+      minutes: "/5"
   condition:
     condition: state
     entity_id: binary_sensor.tag_nacht
@@ -13,10 +16,13 @@
     data:
       name: default
 
+# set dark theme on night
 - alias: set_theme_night
   trigger:
-    platform: time_pattern
-    minutes: "/5"
+    - platform: homeassistant
+      event: start
+    - platform: time_pattern
+      minutes: "/5"
   condition:
     condition: state
     entity_id: binary_sensor.tag_nacht
