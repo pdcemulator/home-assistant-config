@@ -57,6 +57,7 @@ My house runs with the KNX bus system. The majority of the automations are imple
 ## <a name="media_player">Media Player</a>
 | Device  | Connection | Home Assistant | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| [LG 43UM7500PLA](https://www.lg.com/uk/tvs/lg-43UM7500PLA) | Ethernet | [LB webOS](https://www.home-assistant.io/integrations/webostv/) | TV |
 | [Sonos Beam](https://www.sonos.com/en-us/shop/beam.html) | Wifi | [Sonos](https://www.home-assistant.io/integrations/sonos/) | Audio Playback and TTS |
 | Sonos Play:1 | Wifi | [Sonos](https://www.home-assistant.io/integrations/sonos/) | Audio Playback and TTS |
 | Sonos Play:3 | Wifi | [Sonos](https://www.home-assistant.io/integrations/sonos/) | Audio Playback and TTS |
