@@ -1,0 +1,25 @@
+---
+
+# Close Cover when TV is tuned on
+- alias: LGTV Close Cover
+  trigger:
+    platform: state
+    entity_id: media_player.tv_schlafen
+    to: 'on'
+  action:
+    service: cover.close_cover
+    entity_id: cover.og_schlafen_n
+
+# Open Cover wen TV is turned off
+- alias: LGTV Open Cover
+  trigger:
+    platform: state
+    entity_id: media_player.tv_schlafen
+    to: 'off'
+  condition:
+    - condition: numeric_state
+      entity_id: cover.og_schlafen_n
+      below: 100                      # closed: 0, open: 100
+  action:
+    service: cover.open_cover
+    entity_id: cover.og_schlafen_n

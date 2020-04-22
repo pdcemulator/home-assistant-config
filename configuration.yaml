@@ -46,6 +46,10 @@ http:
 
 knx: !include knx.yaml
 
+webostv:
+  host: !secret lgtv_ip
+  name: TV Schlafen
+
 logger:
   default: warning
   logs:

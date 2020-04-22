@@ -1,6 +1,8 @@
 ---
+# https://www.home-assistant.io/integrations/rest_command/
+
 rest_command:
   visu_screen_on:
-    url: http://192.168.100.70:2323/?cmd=screenOn&password=abc123
+    url: !secret visu_cmd_on # http://ip:2323/?cmd=screenOn&password=pass
   visu_screen_off:
-    url: http://192.168.100.70:2323/?cmd=screenOff&password=abc123
+    url: !secret visu_cmd_off
