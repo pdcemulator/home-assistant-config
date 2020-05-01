@@ -1,82 +1,81 @@
 ---
-switch:
-  - platform: knx
-    name: EG HAR SD Fenster
-    address: '1/1/1'
-    state_address: '1/4/1'
-  - platform: knx
-    name: EG Bad SD Fenster
-    address: '1/1/7'
-    state_address: '1/4/7'
-  - platform: knx
-    name: EG Arbeiten SD Fenster S
-    address: '1/1/13'
-    state_address: '1/4/13'
-  - platform: knx
-    name: EG Arbeiten SD Fenster W
-    address: '1/1/14'
-    state_address: '1/4/14'
-  - platform: knx
-    name: EG Kueche SD Fenster
-    address: '1/1/19'
-    state_address: '1/4/19'
-  - platform: knx
-    name: EG Essen SD Tuer
-    address: '1/1/29'
-    state_address: '1/4/29'
-  - platform: knx
-    name: EG Essen SD Weihnachtsbaum
-    address: '1/1/31'
-    state_address: '1/4/31'
-  - platform: knx
-    name: EG Wohnen SD Tuer L
-    address: '1/1/34'
-    state_address: '1/4/34'
-  - platform: knx
-    name: EG Wohnen SD Tuer R
-    address: '1/1/35'
-    state_address: '1/4/35'
-  - platform: knx
-    name: OG Kind I SD Fenster
-    address: '1/1/61'
-    state_address: '1/4/61'
-  - platform: knx
-    name: OG Kind II SD Fenster
-    address: '1/1/67'
-    state_address: '1/4/67'
-  - platform: knx
-    name: OG Bad SD Fenster
-    address: '1/1/75'
-    state_address: '1/4/75'
-  - platform: knx
-    name: OG Bad SD Sonos
-    address: '1/1/77'
-    state_address: '1/4/77'
-  - platform: knx
-    name: OG Bad SD Heizung
-    address: '1/1/79'
-    state_address: '1/4/79'
-  - platform: knx
-    name: OG Ankleide SD Fenster
-    address: '1/1/81'
-    state_address: '1/4/81'
-  - platform: knx
-    name: OG Schlafen SD Fenster
-    address: '1/1/86'
-    state_address: '1/4/86'
-  - platform: knx
-    name: OG Treppe SD Fenster
-    address: '1/1/93'
-    state_address: '1/4/93'
-  - platform: knx
-    name: Terasse SD
-    address: '1/1/151'
-    state_address: '1/4/151'
-  - platform: knx
-    name: Carport SD Beleuchtung
-    address: '1/1/162'
-    state_address: '1/4/162'
-  - platform: knx
-    name: Carport SD Seite
-    address: '1/1/163'
-    state_address: '1/4/163'
+- platform: knx
+  name: EG HAR SD Fenster
+  address: '1/1/1'
+  state_address: '1/4/1'
+- platform: knx
+  name: EG Bad SD Fenster
+  address: '1/1/7'
+  state_address: '1/4/7'
+- platform: knx
+  name: EG Arbeiten SD Fenster S
+  address: '1/1/13'
+  state_address: '1/4/13'
+- platform: knx
+  name: EG Arbeiten SD Fenster W
+  address: '1/1/14'
+  state_address: '1/4/14'
+- platform: knx
+  name: EG Kueche SD Fenster
+  address: '1/1/19'
+  state_address: '1/4/19'
+- platform: knx
+  name: EG Essen SD Tuer
+  address: '1/1/29'
+  state_address: '1/4/29'
+- platform: knx
+  name: EG Essen SD Weihnachtsbaum
+  address: '1/1/31'
+  state_address: '1/4/31'
+- platform: knx
+  name: EG Wohnen SD Tuer L
+  address: '1/1/34'
+  state_address: '1/4/34'
+- platform: knx
+  name: EG Wohnen SD Tuer R
+  address: '1/1/35'
+  state_address: '1/4/35'
+- platform: knx
+  name: OG Kind I SD Fenster
+  address: '1/1/61'
+  state_address: '1/4/61'
+- platform: knx
+  name: OG Kind II SD Fenster
+  address: '1/1/67'
+  state_address: '1/4/67'
+- platform: knx
+  name: OG Bad SD Fenster
+  address: '1/1/75'
+  state_address: '1/4/75'
+- platform: knx
+  name: OG Bad SD Sonos
+  address: '1/1/77'
+  state_address: '1/4/77'
+- platform: knx
+  name: OG Bad SD Heizung
+  address: '1/1/79'
+  state_address: '1/4/79'
+- platform: knx
+  name: OG Ankleide SD Fenster
+  address: '1/1/81'
+  state_address: '1/4/81'
+- platform: knx
+  name: OG Schlafen SD Fenster
+  address: '1/1/86'
+  state_address: '1/4/86'
+- platform: knx
+  name: OG Treppe SD Fenster
+  address: '1/1/93'
+  state_address: '1/4/93'
+- platform: knx
+  name: Terasse SD
+  address: '1/1/151'
+  state_address: '1/4/151'
+- platform: knx
+  name: Carport SD Beleuchtung
+  address: '1/1/162'
+  state_address: '1/4/162'
+- platform: knx
+  name: Carport SD Seite
+  address: '1/1/163'
+  state_address: '1/4/163'
