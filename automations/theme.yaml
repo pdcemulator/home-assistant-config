@@ -1,33 +1,21 @@
 ---
 
-# set default theme on day
-- alias: set_theme_day
+- alias: 'Change theme'
   trigger:
     - platform: homeassistant
       event: start
-    - platform: time_pattern
-      minutes: "/5"
-  condition:
-    condition: state
-    entity_id: binary_sensor.tag_nacht
-    state: 'on'
+    - platform: state
+      entity_id: binary_sensor.tag_nacht
+      to: 'on'
+    - platform: state
+      entity_id: binary_sensor.tag_nacht
+      to: 'off'
   action:
-    service: frontend.set_theme
-    data:
-      name: default
-
-# set dark theme on night
-- alias: set_theme_night
-  trigger:
-    - platform: homeassistant
-      event: start
-    - platform: time_pattern
-      minutes: "/5"
-  condition:
-    condition: state
-    entity_id: binary_sensor.tag_nacht
-    state: 'off'
-  action:
-    service: frontend.set_theme
-    data:
-      name: 'Google Dark Theme'
+    - service_template: frontend.set_theme
+      data_template:
+        name: >
+          {% if states.binary_sensor.tag_nacht.state == "on" %}
+            Google Light Theme
+          {% else %}
+            Google Dark Theme
+          {% endif %}
