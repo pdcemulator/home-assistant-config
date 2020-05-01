@@ -18,14 +18,14 @@ fire_event_filter: ['1/1/230', '1/2/230']
 # https://www.home-assistant.io/integrations/knx/#exposing-sensor-values-or-time-to-knx-bus
 #
 expose:
-  #- entity_id: sensor.hpsu_mode
-  #  type: ?
-  #  address: '3/7/1'
-  - entity_id: sensor.hpsu_t_ext
-    type: temperature
+  - entity_id: sensor.hpsu_mode
+    type: 1byte_unsigned
+    address: '3/7/1'
+  - entity_id: binary_sensor.hpsu_ext
+    type: binary
     address: '3/7/2'
   - entity_id: sensor.hpsu_ehs
-    type: power
+    type: DPT-9
     address: '3/7/3'
   - entity_id: binary_sensor.hpsu_status_pump
     type: binary
@@ -45,7 +45,7 @@ expose:
   - entity_id: sensor.hpsu_t_dhw1
     type: temperature
     address: '3/7/9'
-  - entity_id: sensor.hpsu_tdhw2
+  - entity_id: sensor.hpsu_t_dhw2
     type: temperature
     address: '3/7/10'
   - entity_id: sensor.hpsu_t_v1
@@ -57,7 +57,7 @@ expose:
   - entity_id: sensor.hpsu_t_vbh
     type: temperature
     address: '3/7/13'
-  - entity_id: sensor.hpsu_tvbh2
+  - entity_id: sensor.hpsu_t_vbh2
     type: temperature
     address: '3/7/14'
   - entity_id: sensor.hpsu_t_return
@@ -66,7 +66,7 @@ expose:
   - entity_id: sensor.hpsu_t_r1
     type: temperature
     address: '3/7/16'
-  - entity_id: sensor.hpsu_tliq2
+  - entity_id: sensor.hpsu_t_liq2
     type: temperature
     address: '3/7/17'
   - entity_id: sensor.hpsu_t_ext
@@ -75,28 +75,28 @@ expose:
   - entity_id: sensor.hpsu_runtime_comp
     type: DPT-7
     address: '3/7/19'
-  - entity_id: sensor.hpsu_qboh
+  - entity_id: sensor.hpsu_ehs_dhw
     type: DPT-13
     address: '3/7/20'
-  - entity_id: sensor.hpsu_qbchhp
+  - entity_id: sensor.hpsu_ehs_ch
     type: DPT-13
     address: '3/7/21'
-  - entity_id: sensor.hpsu_qsc
+  - entity_id: sensor.hpsu_energie_kuehlung
     type: DPT-13
     address: '3/7/22'
-  - entity_id: sensor.hpsu_qch
+  - entity_id: sensor.hpsu_energie_heizung_ch
     type: DPT-13
     address: '3/7/23'
-  - entity_id: sensor.hpsu_qwp
+  - entity_id: sensor.hpsu_energie_erzeugt_wp
     type: DPT-13
     address: '3/7/24'
-  - entity_id: sensor.hpsu_qdhw
+  - entity_id: sensor.hpsu_energie_warmwasser_dhw
     type: DPT-13
     address: '3/7/25'
   - entity_id: sensor.hpsu_v1
     type: DPT-9
     address: '3/7/26'
-  - entity_id: sensor.hpsu_t_dhw_setpoint1
+  - entity_id: sensor.hpsu_t_dhw_setpoint
     type: temperature
     address: '3/7/27'
   - entity_id: sensor.hpsu_t_hs_set

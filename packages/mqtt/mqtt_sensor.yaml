@@ -27,6 +27,7 @@ sensor:
   - platform: mqtt
     name: HPSU Flow Rate
     state_topic: 'hpsu/flow_rate'
+    unit_of_measurement: 'L/h'
   - platform: mqtt
     name: HPSU Mode
     state_topic: 'hpsu/mode'
@@ -90,7 +91,7 @@ sensor:
     unit_of_measurement: '°C'
   - platform: mqtt
     name: HPSU T Liq2
-    state_topic: 'hpsu/t_tliq2'
+    state_topic: 'hpsu/tliq2'
     device_class: temperature
     unit_of_measurement: '°C'
   - platform: mqtt
@@ -114,27 +115,32 @@ sensor:
     device_class: temperature
     unit_of_measurement: '°C'
   - platform: mqtt
-    name: HPSU Q BOH
+    name: HPSU EHS DHW
     state_topic: 'hpsu/qboh'
     unit_of_measurement: 'kWh'
     device_class: power
   - platform: mqtt
-    name: HPSU Waerme erzeugt Heizung (CH)
+    name: HPSU Energie Heizung (CH)
     state_topic: 'hpsu/qch'
     device_class: power
     unit_of_measurement: 'kWh'
   - platform: mqtt
-    name: HPSU Q CHHP
+    name: HPSU EHS CH
     state_topic: 'hpsu/qchhp'
     device_class: power
     unit_of_measurement: 'kWh'
   - platform: mqtt
-    name: HPSU Waerme erzeugt Wasser (DHW)
+    name: HPSU Energie Warmwasser (DHW)
     state_topic: 'hpsu/qdhw'
     device_class: power
     unit_of_measurement: 'kWh'
   - platform: mqtt
-    name: HPSU Waerme erzeugt Wasser (WP)
+    name: HPSU Energie Kuehlung
+    state_topic: 'hpsu/qsc'
+    device_class: power
+    unit_of_measurement: 'kWh'
+  - platform: mqtt
+    name: HPSU Energie erzeugt (WP)
     state_topic: 'hpsu/qwp'
     device_class: power
     unit_of_measurement: 'kWh'
