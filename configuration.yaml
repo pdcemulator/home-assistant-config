@@ -10,9 +10,10 @@ homeassistant:
   time_zone: Europe/Berlin
   name: Home
   customize: !include customize.yaml
-  packages: !include_dir_named packages
 
 automation: !include_dir_merge_list automations
+
+binary_sensor: !include_dir_merge_list entities/binary_sensors
 
 # https://www.home-assistant.io/integrations/caldav/
 calendar:
@@ -23,6 +24,8 @@ calendar:
 
 # https://www.nabucasa.com/config/
 cloud:
+
+cover: !include_dir_merge_list entities/covers
 
 # https://www.home-assistant.io/integrations/discovery/
 discovery:
@@ -44,11 +47,11 @@ http:
   login_attempts_threshold: 3
   trusted_proxies: !secret http_trusted_proxies
 
+input_boolean: !include entities/input_boolean.yaml
+
 knx: !include knx.yaml
 
-webostv:
-  host: !secret lgtv_ip
-  name: TV Schlafen
+light: !include_dir_merge_list entities/lights
 
 logger:
   default: warning
@@ -61,13 +64,18 @@ lovelace:
 
 person: !include entities/persons.yaml
 recorder: !include recorder.yaml
+rest_command: !include entities/rest_command.yaml
 scene: !include entities/scenes.yaml
 script: !include entities/scripts.yaml
+
+sensor: !include_dir_merge_list entities/sensors
 
 # https://www.home-assistant.io/integrations/sonos/
 sonos: 
   media_player:
     hosts: !secret sonos_hosts
+
+switch: !include_dir_merge_list entities/switches
 
 # https://www.home-assistant.io/integrations/google_translate/
 tts:
@@ -80,5 +88,9 @@ weather:
     api_key: !secret darksky_api_key
     #name: !secret darksky_name
     mode: daily
+
+webostv:
+  host: !secret lgtv_ip
+  name: TV Schlafen
 
 #zone: !include_dir_list entities/zones

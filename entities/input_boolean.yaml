@@ -2,11 +2,10 @@
 # The input_boolean integration allows the user to define boolean values that can be controlled via the frontend and can be used within conditions of automation.
 #
 # https://www.home-assistant.io/integrations/input_boolean
-#
-input_boolean:
-  gast:
-    initial: false
-    icon: 'mdi:account'
-  sonos_volume_change_stop:
-    initial: false
-    icon: 'mdi:stop'
+
+gast:
+  initial: false
+  icon: 'mdi:account'
+sonos_volume_change_stop:
+  initial: false
+  icon: 'mdi:stop'

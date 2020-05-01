@@ -1,0 +1,183 @@
+---
+# https://www.home-assistant.io/integrations/sensor.mqtt/
+
+#ToDO: fully id to secrets
+
+  ### Fully Visu ###
+- platform: mqtt
+  name: 'Mem tablet'
+  state_topic: 'fully/deviceInfo/d4b0942d-3010ea98'
+  value_template: '{{ value_json.ramFreeMemory }}'
+- platform: mqtt
+  name: 'Battery tablet'
+  state_topic: 'fully/deviceInfo/d4b0942d-3010ea98'
+  value_template: '{{ value_json.batteryLevel }}'
+
+### HPSU Heatpump ###
+- platform: mqtt
+  name: HPSU BPV
+  state_topic: 'hpsu/bpv'
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: HPSU Ehs
+  state_topic: 'hpsu/ehs'
+  device_class: power
+  unit_of_measurement: 'kW'
+- platform: mqtt
+  name: HPSU Flow Rate
+  state_topic: 'hpsu/flow_rate'
+  unit_of_measurement: 'L/h'
+- platform: mqtt
+  name: HPSU Mode
+  state_topic: 'hpsu/mode'
+- platform: mqtt
+  name: HPSU Posmix
+  state_topic: 'hpsu/posmix'
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: HPSU Pump
+  state_topic: 'hpsu/pump'
+  unit_of_measurement: '%'
+- platform: mqtt
+  name: HPSU Runtime Comp
+  state_topic: 'hpsu/runtime_comp'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T DHW2
+  state_topic: 'hpsu/tdhw2'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T VBH2
+  state_topic: 'hpsu/tvbh2'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T DHW1
+  state_topic: 'hpsu/t_dhw1'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T DHW Setpoint
+  state_topic: 'hpsu/t_dhw_setpoint1'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T Ext
+  state_topic: 'hpsu/t_ext'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T HC
+  state_topic: 'hpsu/t_hc'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T HC Set
+  state_topic: 'hpsu/t_hc_set'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T HS
+  state_topic: 'hpsu/t_hs'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T HS Set
+  state_topic: 'hpsu/t_hs_set'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T Liq2
+  state_topic: 'hpsu/tliq2'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T Return
+  state_topic: 'hpsu/t_return'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T R1
+  state_topic: 'hpsu/t_r1'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T V1
+  state_topic: 'hpsu/t_v1'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU T VBH
+  state_topic: 'hpsu/t_vbh'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  name: HPSU EHS DHW
+  state_topic: 'hpsu/qboh'
+  unit_of_measurement: 'kWh'
+  device_class: power
+- platform: mqtt
+  name: HPSU Energie Heizung (CH)
+  state_topic: 'hpsu/qch'
+  device_class: power
+  unit_of_measurement: 'kWh'
+- platform: mqtt
+  name: HPSU EHS CH
+  state_topic: 'hpsu/qchhp'
+  device_class: power
+  unit_of_measurement: 'kWh'
+- platform: mqtt
+  name: HPSU Energie Warmwasser (DHW)
+  state_topic: 'hpsu/qdhw'
+  device_class: power
+  unit_of_measurement: 'kWh'
+- platform: mqtt
+  name: HPSU Energie Kuehlung
+  state_topic: 'hpsu/qsc'
+  device_class: power
+  unit_of_measurement: 'kWh'
+- platform: mqtt
+  name: HPSU Energie erzeugt (WP)
+  state_topic: 'hpsu/qwp'
+  device_class: power
+  unit_of_measurement: 'kWh'
+- platform: mqtt
+  name: HPSU V1
+  state_topic: 'hpsu/v1'
+  unit_of_measurement: 'L/h'
+
+### Shelly ###
+# default status update every 12h, change param sleep_mode_period
+# http://shelly-api-docs.shelly.cloud/#shelly-flood-status
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B145/sensor/temperature'
+  name: 'Shelly Temperatur HAR'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B145/sensor/battery'
+  name: 'Shelly Batterie HAR'
+  device_class: battery
+  unit_of_measurement: '%'
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B315/sensor/temperature'
+  name: 'Shelly Temperatur K Spuele'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B315/sensor/battery'
+  name: 'Shelly Batterie K Spuele'
+  device_class: battery
+  unit_of_measurement: '%'
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B1F9/sensor/temperature'
+  name: 'Shelly Temperatur K GS'
+  device_class: temperature
+  unit_of_measurement: '°C'
+- platform: mqtt
+  state_topic: 'shellies/shellyflood-F2B1F9/sensor/battery'
+  name: 'Shelly Batterie K GS'
+  device_class: battery
+  unit_of_measurement: '%'
