@@ -113,7 +113,7 @@
 - platform: knx
   name: Windgeschwindigkeit
   state_address: '5/0/5'
-  type: 'speed_ms'
+  type: 'wind_speed_ms'
 
 - platform: knx
   name: Helligkeit EG Bad
