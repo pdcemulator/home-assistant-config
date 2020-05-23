@@ -32,7 +32,6 @@ discovery:
   ignore:
     - homekit
     - sonos
-    - synology_dsm
 
 # https://www.home-assistant.io/integrations/frontend/
 frontend:
