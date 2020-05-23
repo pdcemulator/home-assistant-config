@@ -1,7 +1,0 @@
----
-# Text to speech
-#
-# https://www.home-assistant.io/integrations/google_translate/
-#
-- platform: google_translate
-  language: 'de'
