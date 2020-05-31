@@ -172,12 +172,12 @@
   device_class: battery
   unit_of_measurement: '%'
 - platform: mqtt
-  state_topic: 'shellies/shellyflood-F2B1F9/sensor/temperature'
+  state_topic: 'shellies/shellyflood-C8A9DB/sensor/temperature'
   name: 'Shelly Temperatur K GS'
   device_class: temperature
   unit_of_measurement: '°C'
 - platform: mqtt
-  state_topic: 'shellies/shellyflood-F2B1F9/sensor/battery'
+  state_topic: 'shellies/shellyflood-C8A9DB/sensor/battery'
   name: 'Shelly Batterie K GS'
   device_class: battery
   unit_of_measurement: '%'

@@ -27,7 +27,7 @@
   payload_off: 'false'
   device_class: moisture
 - platform: mqtt
-  state_topic: 'shellies/shellyflood-F2B1F9/sensor/flood'
+  state_topic: 'shellies/shellyflood-C8A9DB/sensor/flood'
   name: 'Shelly Feuchtigkeit Kueche GS'
   payload_on: 'true'
   payload_off: 'false'
