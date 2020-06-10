@@ -16,19 +16,19 @@
 ### Shelly ###
 - platform: mqtt
   state_topic: 'shellies/shellyflood-F2B145/sensor/flood'
-  name: 'Shelly Feuchtigkeit HAR'
+  name: 'Shelly Leckage HAR'
   payload_on: 'true'
   payload_off: 'false'
   device_class: moisture
 - platform: mqtt
   state_topic: 'shellies/shellyflood-F2B315/sensor/flood'
-  name: 'Shelly Feuchtigkeit Kueche Spuele'
+  name: 'Shelly Leckage Kueche Spuele'
   payload_on: 'true'
   payload_off: 'false'
   device_class: moisture
 - platform: mqtt
   state_topic: 'shellies/shellyflood-C8A9DB/sensor/flood'
-  name: 'Shelly Feuchtigkeit Kueche GS'
+  name: 'Shelly Leckage Kueche GS'
   payload_on: 'true'
   payload_off: 'false'
   device_class: moisture
