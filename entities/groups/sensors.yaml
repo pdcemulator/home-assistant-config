@@ -1,0 +1,8 @@
+---
+  sensors_leckage:
+    name: Sensors Leckage
+    control: hidden
+    entities:
+      - binary_sensor.shelly_leckage_har
+      - binary_sensor.shelly_leckage_kueche_gs
+      - binary_sensor.shelly_leckage_kueche_spuele
