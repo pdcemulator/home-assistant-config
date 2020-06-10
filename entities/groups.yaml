@@ -1,6 +1,0 @@
----
-  eg_wohnen:
-    name: EG Wohnen
-    entities:
-      - light.eg_wohnen
-      - sensor.temperatur_eg_wohnen
