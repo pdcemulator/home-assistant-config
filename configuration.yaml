@@ -38,7 +38,7 @@ frontend:
   javascript_version: auto
   themes: !include_dir_merge_named themes
 
-group: !include entities/groups.yaml
+group: !include_dir_merge_list entities/groups
 
 # https://www.home-assistant.io/integrations/http/
 http:
