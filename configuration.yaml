@@ -1,16 +1,3 @@
-
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
-
-homeassistant:
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  elevation: 300
-  unit_system: metric
-  time_zone: Europe/Berlin
-  name: Home
-  customize: !include customize.yaml
-
 automation: !include_dir_merge_list automations
 
 binary_sensor: !include_dir_merge_list entities/binary_sensors
@@ -24,6 +11,8 @@ calendar:
 
 # https://www.nabucasa.com/config/
 cloud:
+
+config:
 
 cover: !include_dir_merge_list entities/covers
 
@@ -40,6 +29,24 @@ frontend:
 
 group: !include_dir_merge_list entities/groups
 
+history:
+  exclude:
+    domains:
+      - calendar
+      - media_player
+      - sun
+      - updater
+      - weather
+
+homeassistant:
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 300
+  unit_system: metric
+  time_zone: Europe/Berlin
+  name: Home
+  customize: !include customize.yaml
+
 # https://www.home-assistant.io/integrations/http/
 http:
   use_x_forwarded_for: true
@@ -53,6 +60,8 @@ knx: !include knx.yaml
 
 light: !include_dir_merge_list entities/lights
 
+logbook:
+
 logger:
   default: warning
   logs:
@@ -61,6 +70,11 @@ logger:
 # https://www.home-assistant.io/lovelace/yaml-mode/
 lovelace:
   mode: yaml
+
+mobile_app:
+
+# https://www.home-assistant.io/integrations/mqtt
+# Configure in Web UI, Configuration -> Integrations -> MQTT
 
 person: !include entities/persons.yaml
 recorder: !include recorder.yaml
@@ -75,12 +89,21 @@ sonos:
   media_player:
     hosts: !secret sonos_hosts
 
+sun:
+
 switch: !include_dir_merge_list entities/switches
+
+system_health:
 
 # https://www.home-assistant.io/integrations/google_translate/
 tts:
   - platform: google_translate
     language: 'de'
+
+# https://www.home-assistant.io/integrations/unifi/
+# Configure in Web UI, Configuration -> Integrations -> UniFi Controller
+
+#updater:
 
 # https://www.home-assistant.io/integrations/weather.darksky/
 weather:
@@ -89,8 +112,11 @@ weather:
     #name: !secret darksky_name
     mode: daily
 
+# https://www.home-assistant.io/integrations/webostv
 webostv:
   host: !secret lgtv_ip
   name: TV Schlafen
+
+#zeroconf:
 
 #zone: !include_dir_list entities/zones
