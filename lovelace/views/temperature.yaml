@@ -21,8 +21,8 @@ cards:
     type: entities
     show_header_toggle: false
   - entities:
-      - sensor.temperatur_dach
-      - sensor.temperatur_aussen_fassade_n
+      - sensor.dach_innen_temperature
+      - sensor.dach_aussen_temperature
       - sensor.temperatur_aussen_ws
     title: Dach und Außen
     type: entities

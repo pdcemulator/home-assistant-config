@@ -20,7 +20,7 @@ cards:
       - type: sensor
         name: Aussen
         graph: line
-        entity: sensor.temperatur_aussen_fassade_n
+        entity: sensor.dach_aussen_temperature
       - type: sensor
         name: Wohnen
         graph: line
@@ -30,7 +30,7 @@ cards:
       - type: sensor
         name: Aussen
         graph: line
-        entity: sensor.aussen_luftfeuchte_rel
+        entity: sensor.dach_aussen_humidity
         icon: 'mdi:water-percent'
       - type: sensor
         name: Warmwasser

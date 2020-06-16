@@ -1,53 +1,53 @@
 ---
-- platform: knx
-  name: EG Wohnen Luftfeuchte rel
-  state_address: '5/2/4'
-  type: 'percent'
-- platform: knx
-  name: OG Kind I Luftfeuchte rel
-  state_address: '5/2/20'
-  type: 'percent'
-- platform: knx
-  name: OG Bad Luftfeuchte rel
-  state_address: '5/2/25'
-  type: 'percent'
-- platform: knx
-  name: OG Schlafen Luftfeuchte rel
-  state_address: '5/2/27'
-  type: 'percent'
-- platform: knx
-  name: Dach Luftfeuchte rel
-  state_address: '5/2/30'
-  type: 'percent'
-- platform: knx
-  name: Aussen Luftfeuchte rel
-  state_address: '5/2/40'
-  type: 'percent'
+# - platform: knx
+#   name: EG Wohnen Luftfeuchte rel
+#   state_address: '5/2/4'
+#   type: 'percent'
+# - platform: knx
+#   name: OG Kind I Luftfeuchte rel
+#   state_address: '5/2/20'
+#   type: 'percent'
+# - platform: knx
+#   name: OG Bad Luftfeuchte rel
+#   state_address: '5/2/25'
+#   type: 'percent'
+# - platform: knx
+#   name: OG Schlafen Luftfeuchte rel
+#   state_address: '5/2/27'
+#   type: 'percent'
+# - platform: knx
+#   name: Dach Luftfeuchte rel
+#   state_address: '5/2/30'
+#   type: 'percent'
+# - platform: knx
+#   name: Aussen Luftfeuchte rel
+#   state_address: '5/2/40'
+#   type: 'percent'
 
-- platform: knx
-  name: EG Wohnen Luftfeuchte abs
-  state_address: '5/2/104'
-  type: '4byte_float'
-- platform: knx
-  name: OG Kind I Luftfeuchte abs
-  state_address: '5/2/120'
-  type: '4byte_float'
-- platform: knx
-  name: OG Bad Luftfeuchte abs
-  state_address: '5/2/125'
-  type: '4byte_float'
-- platform: knx
-  name: OG Schlafen Luftfeuchte abs
-  state_address: '5/2/127'
-  type: '4byte_float'
-- platform: knx
-  name: Dach Luftfeuchte abs
-  state_address: '5/2/130'
-  type: '4byte_float'
-- platform: knx
-  name: Aussen Luftfeuchte abs
-  state_address: '5/2/140'
-  type: '4byte_float'
+# - platform: knx
+#   name: EG Wohnen Luftfeuchte abs
+#   state_address: '5/2/104'
+#   type: '4byte_float'
+# - platform: knx
+#   name: OG Kind I Luftfeuchte abs
+#   state_address: '5/2/120'
+#   type: '4byte_float'
+# - platform: knx
+#   name: OG Bad Luftfeuchte abs
+#   state_address: '5/2/125'
+#   type: '4byte_float'
+# - platform: knx
+#   name: OG Schlafen Luftfeuchte abs
+#   state_address: '5/2/127'
+#   type: '4byte_float'
+# - platform: knx
+#   name: Dach Luftfeuchte abs
+#   state_address: '5/2/130'
+#   type: '4byte_float'
+# - platform: knx
+#   name: Aussen Luftfeuchte abs
+#   state_address: '5/2/140'
+#   type: '4byte_float'
 
 - platform: knx
   name: Temperatur EG HAR
@@ -97,14 +97,14 @@
   name: Temperatur OG Flur
   state_address: '5/3/29'
   type: 'temperature'
-- platform: knx
-  name: Temperatur Dach
-  state_address: '5/3/30'
-  type: 'temperature'
-- platform: knx
-  name: Temperatur Aussen Fassade N
-  state_address: '5/3/40'
-  type: 'temperature'
+# - platform: knx
+#   name: Temperatur Dach
+#   state_address: '5/3/30'
+#   type: 'temperature'
+# - platform: knx
+#   name: Temperatur Aussen Fassade N
+#   state_address: '5/3/40'
+#   type: 'temperature'
 - platform: knx
   name: Temperatur Aussen WS
   state_address: '5/3/41'

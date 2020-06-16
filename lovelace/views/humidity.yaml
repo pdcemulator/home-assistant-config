@@ -4,34 +4,34 @@ cards:
     type: entities
     show_header_toggle: false
     entities:
-      - entity: sensor.eg_wohnen_luftfeuchte_rel
+      - entity: sensor.eg_wohnen_humidity
         icon: 'mdi:water-percent'
-      - entity: sensor.og_kind_i_luftfeuchte_rel
+      - entity: sensor.og_kind_i_humidity
         icon: 'mdi:water-percent'
-      - entity: sensor.og_bad_luftfeuchte_rel
+      - entity: sensor.og_bad_humidity
         icon: 'mdi:water-percent'
-      - entity: sensor.og_schlafen_luftfeuchte_rel
+      - entity: sensor.og_schlafen_humidity
         icon: 'mdi:water-percent'
-      - entity: sensor.dach_luftfeuchte_rel
+      - entity: sensor.dach_innen_humidity
         icon: 'mdi:water-percent'
-      - entity: sensor.aussen_luftfeuchte_rel
+      - entity: sensor.dach_aussen_humidity
         icon: 'mdi:water-percent'
-  - title: Luftfeuchte absolut
-    type: entities
-    show_header_toggle: false
-    entities:
-      - entity: sensor.eg_wohnen_luftfeuchte_abs
-        icon: 'mdi:water-percent'
-      - entity: sensor.og_kind_i_luftfeuchte_abs
-        icon: 'mdi:water-percent'
-      - entity: sensor.og_bad_luftfeuchte_abs
-        icon: 'mdi:water-percent'
-      - entity: sensor.og_schlafen_luftfeuchte_abs
-        icon: 'mdi:water-percent'
-      - entity: sensor.dach_luftfeuchte_abs
-        icon: 'mdi:water-percent'
-      - entity: sensor.aussen_luftfeuchte_abs
-        icon: 'mdi:water-percent'
+  # - title: Luftfeuchte absolut
+  #   type: entities
+  #   show_header_toggle: false
+  #   entities:
+  #     - entity: sensor.eg_wohnen_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
+  #     - entity: sensor.og_kind_i_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
+  #     - entity: sensor.og_bad_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
+  #     - entity: sensor.og_schlafen_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
+  #     - entity: sensor.dach_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
+  #     - entity: sensor.aussen_luftfeuchte_abs
+  #       icon: 'mdi:water-percent'
   - title: Helligkeit
     type: entities
     show_header_toggle: false
