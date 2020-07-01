@@ -1,0 +1,17 @@
+---
+
+- alias: Turn pool pump on
+  trigger:
+    platform: time
+    at: "05:12"
+  action:
+    service: switch.turn_on
+    entity_id: switch.terasse_sd
+
+- alias: Turn pool pump off
+  trigger:
+    platform: time
+    at: "07:12"
+  action:
+    service: switch.turn_off
+    entity_id: switch.terasse_sd
