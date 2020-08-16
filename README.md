@@ -45,8 +45,8 @@ My house runs with the KNX bus system. The majority of the automations are imple
 | [MDT SCN-G360K3](https://www.mdt.de/EN_Presence_Detectors.html)| KNX | [KNX Sensor](https://www.home-assistant.io/integrations/sensor.knx/) | Presence Detector, Light- and temperature sensor |
 | [Steinel iHF 3D](https://www.steinel.de/en/trade-professional/sensors/knx/ihf-3d-knx-007607.html)| KNX | [KNX Sensor](https://www.home-assistant.io/integrations/sensor.knx/) | Movement Detector |
 | [MDT SCN-WS3HW](https://www.mdt.de/EN_Weather_Station.html)| KNX | [KNX Sensor](https://www.home-assistant.io/integrations/sensor.knx/) | Weather Station |
-| Elabnet DS18B20 based sensors | 1-Wire (over KNX)| [KNX Sensor](https://www.home-assistant.io/integrations/sensor.knx/) | Temperature sensor |
-| Elabnet DS2438 based sensors | 1-Wire (over KNX) | [KNX Sensor](https://www.home-assistant.io/integrations/sensor.knx/) | Humidity sensor |
+| Elabnet DS18B20 based sensors | 1-Wire | [Onewire Sensor](https://www.home-assistant.io/integrations/onewire/) | Temperature sensor |
+| Elabnet DS2438 based sensors | 1-Wire | [Onewire Sensor](https://www.home-assistant.io/integrations/onewire/) | Humidity sensor |
 
 ## <a name="switch">Switch</a>
 | Device  | Connection | Home Assistant | Notes |
@@ -72,7 +72,7 @@ My house runs with the KNX bus system. The majority of the automations are imple
 ## <a name="other">Other</a>
 | Device  | Connection | Notes |
 | ------------- | ------------- | ------------- |
-| [Elabnet Timberwolf 950Q](https://shop.wiregate.de/aktion/multifunktionsgateway/timberwolf-hutschiene/timberwolf-server-950-art-nr-517.html) | KNX / Ethernet / 1-Wire | KNX IP Interface, 1-Wire Gateway, Logic Server |
+| [Elabnet PBM01-USB](https://shop.elabnet.de/1-wire/serie/hserie/1-wire-professional-busmaster-pbm01-usb_812_2073) | 1-Wire / USB | 1-Wire Busmaster |
 | [MDT SCN-LOG1](https://www.mdt.de/EN_Logical_Module.html) | KNX | Logic Module |
 | [MDT SCN-LK001](https://www.mdt.de/EN_Interfaces.html) | KNX | Line Coupler |
 | [Weinzierl 730](https://www.weinzierl.de/index.php/en/all-knx/knx-devices-en/produktarchiv-en/knx-ip-interface-730-en) | KNX / Ethernet | KNX IP Interface |
