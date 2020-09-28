@@ -30,10 +30,13 @@ cards:
     title: Dach
     type: entities
   - entities:
-      - light.eingang
       - light.terasse_w
       - light.terasse_n
+      - light.eingang
+      - light.eingang_a
+      - light.eingang_b
       - light.carport
+      - light.schuppen
     title: Außen
     type: entities
 icon: 'mdi:lightbulb'

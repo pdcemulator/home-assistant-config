@@ -116,6 +116,22 @@
   address: '1/1/153'
   state_address: '1/4/153'
 - platform: knx
+  name: Eingang A
+  address: '1/1/154'
+  state_address: '1/4/154'
+- platform: knx
+  name: Eingang B
+  address: '1/1/155'
+  state_address: '1/4/155'
+- platform: knx
   name: Carport
   address: '1/1/160'
+  brightness_address: '1/3/160'
   state_address: '1/4/160'
+  brightness_state_address: '1/5/160'
+- platform: knx
+  name: Schuppen
+  address: '1/1/161'
+  brightness_address: '1/3/161'
+  state_address: '1/4/161'
+  brightness_state_address: '1/5/161'
