@@ -49,3 +49,18 @@
 - platform: knx
   name: Bewegung EG Flur
   state_address: '5/5/6'
+- platform: knx
+  name: Steinel Licht schalten
+  state_address: '5/7/0'
+- platform: knx
+  name: Steinel Entfernung 1
+  state_address: '5/7/2'
+- platform: knx
+  name: Steinel Bewegung links
+  state_address: '5/7/3'
+- platform: knx
+  name: Steinel Bewegung frontal
+  state_address: '5/7/4'
+- platform: knx
+  name: Steinel Bewegung rechts
+  state_address: '5/7/5'
