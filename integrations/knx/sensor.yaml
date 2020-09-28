@@ -49,52 +49,40 @@
 #   state_address: '5/2/140'
 #   type: '4byte_float'
 
-- platform: knx
-  name: Temperatur EG HAR
+- name: Temperatur EG HAR
   state_address: '5/3/0'
   type: 'temperature'
-- platform: knx
-  name: Temperatur EG Bad
+- name: Temperatur EG Bad
   state_address: '5/3/1'
   type: 'temperature'
-- platform: knx
-  name: Temperatur EG Arbeiten
+- name: Temperatur EG Arbeiten
   state_address: '5/3/2'
   type: 'temperature'
-- platform: knx
-  name: Temperatur EG Essen
+- name: Temperatur EG Essen
   state_address: '5/3/3'
   type: 'temperature'
-- platform: knx
-  name: Temperatur EG Wohnen
+- name: Temperatur EG Wohnen
   state_address: '5/3/4'
   type: 'temperature'
-- platform: knx
-  name: Temperatur EG Flur
+- name: Temperatur EG Flur
   state_address: '5/3/5'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Kind I
+- name: Temperatur OG Kind I
   state_address: '5/3/20'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Kind II
+- name: Temperatur OG Kind II
   state_address: '5/3/22'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Bad
+- name: Temperatur OG Bad
   state_address: '5/3/24'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Ankleide
+- name: Temperatur OG Ankleide
   state_address: '5/3/26'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Schlafen
+- name: Temperatur OG Schlafen
   state_address: '5/3/27'
   type: 'temperature'
-- platform: knx
-  name: Temperatur OG Flur
+- name: Temperatur OG Flur
   state_address: '5/3/29'
   type: 'temperature'
 # - platform: knx
@@ -105,49 +93,38 @@
 #   name: Temperatur Aussen Fassade N
 #   state_address: '5/3/40'
 #   type: 'temperature'
-- platform: knx
-  name: Temperatur Aussen WS
+- name: Temperatur Aussen WS
   state_address: '5/3/41'
   type: 'temperature'
 
-- platform: knx
-  name: Windgeschwindigkeit
+- name: Windgeschwindigkeit
   state_address: '5/0/5'
   type: 'wind_speed_ms'
 
-- platform: knx
-  name: Helligkeit EG Bad
+- name: Helligkeit EG Bad
   state_address: '5/4/0'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit EG Flur
+- name: Helligkeit EG Flur
   state_address: '5/4/4'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit OG Bad
+- name: Helligkeit OG Bad
   state_address: '5/4/7'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit OG Ankleide
+- name: Helligkeit OG Ankleide
   state_address: '5/4/8'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit OG Flur
+- name: Helligkeit OG Flur
   state_address: '5/4/10'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit Fassade O
+- name: Helligkeit Fassade O
   state_address: '5/4/11'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit Fassade S
+- name: Helligkeit Fassade S
   state_address: '5/4/12'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit Fassade W
+- name: Helligkeit Fassade W
   state_address: '5/4/13'
   type: 'illuminance'
-- platform: knx
-  name: Helligkeit Carport
+- name: Helligkeit Carport
   state_address: '5/4/15'
   type: 'illuminance'

@@ -1,0 +1,48 @@
+---
+- name: Fenster EG HAR
+  state_address: '2/7/0'
+  device_class: window
+- name: Fenster EG Bad
+  state_address: '2/7/1'
+  device_class: window
+- name: Fenster EG Arbeiten S
+  state_address: '2/7/2'
+  device_class: window
+- name: Fenster EG Arbeiten W
+  state_address: '2/7/3'
+  device_class: window
+- name: Fenster EG Kueche
+  state_address: '2/7/4'
+  device_class: window
+- name: Tuer EG Essen
+  state_address: '2/7/5'
+  device_class: door
+- name: Tuer EG Wohnen L
+  state_address: '2/7/6'
+  device_class: door
+- name: Tuer EG Wohnen R
+  state_address: '2/7/7'
+  device_class: door
+- name: Tuer EG Abstellkammer
+  state_address: '2/7/8'
+  device_class: door
+- name: Haustuer
+  state_address: '2/7/9'
+  device_class: door
+- name: OG Dachluke
+  state_address: '2/7/10'
+  device_class: opening
+- name: Tag Nacht
+  state_address: '5/0/2'
+- name: Bewegung EG Flur
+  state_address: '5/5/6'
+- name: Steinel Licht schalten
+  state_address: '5/7/0'
+- name: Steinel Entfernung 1
+  state_address: '5/7/2'
+- name: Steinel Bewegung links
+  state_address: '5/7/3'
+- name: Steinel Bewegung frontal
+  state_address: '5/7/4'
+- name: Steinel Bewegung rechts
+  state_address: '5/7/5'

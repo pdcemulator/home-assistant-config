@@ -11,6 +11,12 @@ tunneling:
 fire_event: true
 fire_event_filter: ['1/1/230', '1/2/230']
 
+binary_sensor: !include integrations/knx/binary_sensor.yaml
+cover: !include integrations/knx/cover.yaml
+light: !include integrations/knx/light.yaml
+sensor: !include integrations/knx/sensor.yaml
+switch: !include integrations/knx/switch.yaml
+
 # KNX integration is able to expose time or sensor values to KNX bus.
 # The integration will broadcast any change of the exposed value to the 
 # KNX bus and answer read requests to the specified group address
@@ -18,93 +24,6 @@ fire_event_filter: ['1/1/230', '1/2/230']
 # https://www.home-assistant.io/integrations/knx/#exposing-sensor-values-or-time-to-knx-bus
 #
 expose:
-  - entity_id: sensor.hpsu_mode
-    type: 1byte_unsigned
-    address: '3/7/1'
-  - entity_id: binary_sensor.hpsu_ext
-    type: binary
-    address: '3/7/2'
-  - entity_id: sensor.hpsu_ehs
-    type: DPT-9
-    address: '3/7/3'
-  - entity_id: binary_sensor.hpsu_status_pump
-    type: binary
-    address: '3/7/4'
-  - entity_id: sensor.hpsu_pump
-    type: percent
-    address: '3/7/5'
-  - entity_id: sensor.hpsu_flow_rate
-    type: DPT-9
-    address: '3/7/6'
-  - entity_id: sensor.hpsu_bpv
-    type: percent
-    address: '3/7/7'
-  - entity_id: sensor.hpsu_posmix
-    type: percent
-    address: '3/7/8'
-  - entity_id: sensor.hpsu_t_dhw1
-    type: temperature
-    address: '3/7/9'
-  - entity_id: sensor.hpsu_t_dhw2
-    type: temperature
-    address: '3/7/10'
-  - entity_id: sensor.hpsu_t_v1
-    type: temperature
-    address: '3/7/11'
-  - entity_id: sensor.hpsu_t_hs
-    type: temperature
-    address: '3/7/12'
-  - entity_id: sensor.hpsu_t_vbh
-    type: temperature
-    address: '3/7/13'
-  - entity_id: sensor.hpsu_t_vbh2
-    type: temperature
-    address: '3/7/14'
-  - entity_id: sensor.hpsu_t_return
-    type: temperature
-    address: '3/7/15'
-  - entity_id: sensor.hpsu_t_r1
-    type: temperature
-    address: '3/7/16'
-  - entity_id: sensor.hpsu_t_liq2
-    type: temperature
-    address: '3/7/17'
-  - entity_id: sensor.hpsu_t_ext
-    type: temperature
-    address: '3/7/18'
-  - entity_id: sensor.hpsu_runtime_comp
-    type: DPT-7
-    address: '3/7/19'
-  - entity_id: sensor.hpsu_ehs_dhw
-    type: DPT-13
-    address: '3/7/20'
-  - entity_id: sensor.hpsu_ehs_ch
-    type: DPT-13
-    address: '3/7/21'
-  - entity_id: sensor.hpsu_energie_kuehlung
-    type: DPT-13
-    address: '3/7/22'
-  - entity_id: sensor.hpsu_energie_heizung_ch
-    type: DPT-13
-    address: '3/7/23'
-  - entity_id: sensor.hpsu_energie_erzeugt_wp
-    type: DPT-13
-    address: '3/7/24'
-  - entity_id: sensor.hpsu_energie_warmwasser_dhw
-    type: DPT-13
-    address: '3/7/25'
-  - entity_id: sensor.hpsu_v1
-    type: DPT-9
-    address: '3/7/26'
-  - entity_id: sensor.hpsu_t_dhw_setpoint
-    type: temperature
-    address: '3/7/27'
-  - entity_id: sensor.hpsu_t_hs_set
-    type: temperature
-    address: '3/7/28'
-  - entity_id: sensor.dach_aussen_temperature
-    type: temperature
-    address: '5/3/40'
     # send Sonos values to KNX bus
   - entity_id: sensor.sonos_og_bad_volume
     type: percent
@@ -112,3 +31,12 @@ expose:
   - entity_id: sensor.sonos_og_bad_state
     type: binary
     address: '1/4/230'
+    # date and time
+  - type: 'date'
+    address: '5/0/0'
+  - type: 'time'
+    address: '5/0/1'
+    # non knx sensors
+  - entity_id: sensor.dach_aussen_temperature
+    type: temperature
+    address: '5/3/40'
