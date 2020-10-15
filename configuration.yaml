@@ -24,7 +24,6 @@ discovery:
 
 # https://www.home-assistant.io/integrations/frontend/
 frontend:
-  javascript_version: auto
   themes: !include_dir_merge_named themes
 
 group: !include_dir_merge_list entities/groups
@@ -53,6 +52,20 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 3
   trusted_proxies: !secret http_trusted_proxies
+
+# https://www.home-assistant.io/integrations/influxdb/
+influxdb:
+  include:
+    domains:
+      - binary_sensor
+      - sensor
+  tags_attributes:
+    - unit_of_measurement
+  component_config_domain:
+    binary_sensor:
+      override_measurement: binary_sensor
+    sensor:
+      override_measurement: sensor
 
 input_boolean: !include entities/input_boolean.yaml
 
