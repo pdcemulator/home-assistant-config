@@ -39,6 +39,7 @@
     platform: state
     entity_id: media_player.tv_schlafen
     to: 'off'
+    for: '00:01:00'
   action:
     - service: cover.open_cover
       entity_id: cover.og_schlafen_n
