@@ -74,14 +74,7 @@ cards:
     - break
 
     ## COLUMN 3 ##
-    - type: custom:calendar-card
+    - type: calendar
       title: 'Kalender'
+      initial_view: dayGridDay
       entities: !secret caldav_calendars
-      timeFormat: HH:mm
-      showLocation: true
-      showLocationIcon: false
-      showMultiDay: false
-      showEventOrigin: true
-      highlightToday: true
-      hidePastEvents: true
-      eventsLimit: 8        
