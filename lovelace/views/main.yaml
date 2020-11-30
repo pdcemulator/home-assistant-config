@@ -1,80 +1,78 @@
 ---
 icon: 'mdi:home'
-id: 0
+path: main
 title: Status
-panel: true
 cards:
-
   ## COLUMN 1 ##
-  - type: custom:layout-card
-    layout: vertical
+  - type: vertical-stack
     cards:
-    - type: glance
-      show_name: false
-      entities:
-        - person.papa
-        - person.mama
-
-    - type: horizontal-stack
-      cards:
-      - type: sensor
-        name: Aussen
-        graph: line
-        entity: sensor.dach_aussen_temperature
-      - type: sensor
-        name: Wohnen
-        graph: line
-        entity: sensor.temperatur_eg_wohnen
-    - type: horizontal-stack
-      cards:
-      - type: sensor
-        name: Aussen
-        graph: line
-        entity: sensor.dach_aussen_humidity
-        icon: 'mdi:water-percent'
-      - type: sensor
-        name: Warmwasser
-        graph: line
-        entity: sensor.hpsu_t_dhw1
-        detail: 2
-    - break
-
-    ## COLUMN 2 ##
-    # bright meteogram on day
-    - type: conditional
-      conditions:
-        - entity: binary_sensor.tag_nacht
-          state: 'on'
-      card:
-        type: picture
-        image: !secret url_meteogram_day
-    # dark meteogram on night
-    - type: conditional
-      conditions:
-        - entity: binary_sensor.tag_nacht
-          state_not: 'on'
-      card:
-        type: picture
-        image: !secret url_meteogram_night
-
-    - type: entity-filter
-      name: Fenster geöffnet
-      entities:
-        - binary_sensor.fenster_eg_har
-        - binary_sensor.fenster_eg_bad
-        - binary_sensor.fenster_eg_arbeiten_s
-        - binary_sensor.fenster_eg_arbeiten_w
-        - binary_sensor.fenster_eg_kueche
-        - binary_sensor.tuer_eg_essen
-        - binary_sensor.tuer_eg_wohnen_l
-        - binary_sensor.tuer_eg_wohnen_r
-      show_empty: false
-      state_filter:
-        - 'on'
-    - break
-
-    ## COLUMN 3 ##
-    - type: calendar
-      title: 'Kalender'
-      initial_view: dayGridDay
-      entities: !secret caldav_calendars
+      - type: glance
+        entities:
+          - person.papa
+          - person.mama
+        show_name: false
+      - type: grid
+        square: false
+        columns: 2
+        cards:
+          - type: sensor
+            entity: sensor.temperatur_eg_wohnen
+            graph: line
+            detail: 2
+            name: Aussen
+          - type: sensor
+            entity: sensor.dach_aussen_temperature
+            graph: line
+            name: Wohnen
+            detail: 2
+      - type: grid
+        square: false
+        columns: 2
+        cards:
+          - type: sensor
+            entity: sensor.dach_aussen_humidity
+            graph: line
+            name: Aussen
+            detail: 2
+          - type: sensor
+            entity: sensor.hpsu_t_dhw1
+            graph: line
+            name: Warmwasser
+            detail: 2
+  ## COLUMN 2 ##
+  - type: vertical-stack
+    cards:
+      # bright meteogram on day
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.tag_nacht
+            state: 'on'
+        card:
+          type: picture
+          image: !secret url_meteogram_day
+      # dark meteogram on night
+      - type: conditional
+        conditions:
+          - entity: binary_sensor.tag_nacht
+            state_not: 'on'
+        card:
+          type: picture
+          image: !secret url_meteogram_night
+      - type: entity-filter
+        name: Fenster geöffnet
+        entities:
+          - binary_sensor.fenster_eg_har
+          - binary_sensor.fenster_eg_bad
+          - binary_sensor.fenster_eg_arbeiten_s
+          - binary_sensor.fenster_eg_arbeiten_w
+          - binary_sensor.fenster_eg_kueche
+          - binary_sensor.tuer_eg_essen
+          - binary_sensor.tuer_eg_wohnen_l
+          - binary_sensor.tuer_eg_wohnen_r
+        show_empty: false
+        state_filter:
+          - 'on'
+  ## COLUMN 3 ##
+  - type: calendar
+    entities: !secret caldav_calendars
+    initial_view: listWeek
