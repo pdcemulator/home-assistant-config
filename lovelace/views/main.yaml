@@ -16,12 +16,12 @@ cards:
         columns: 2
         cards:
           - type: sensor
-            entity: sensor.temperatur_eg_wohnen
+            entity: sensor.dach_aussen_temperature
             graph: line
             detail: 2
             name: Aussen
           - type: sensor
-            entity: sensor.dach_aussen_temperature
+            entity: sensor.temperatur_eg_wohnen
             graph: line
             name: Wohnen
             detail: 2
