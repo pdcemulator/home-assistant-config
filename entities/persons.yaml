@@ -5,7 +5,7 @@
   id: person_papa
   user_id: 6964966623ad4a478e50d2981bba12bb
   device_trackers:
-    - device_tracker.iphone_2
+    - device_tracker.iphonexs
 - name: Mama
   id: person_mama
   device_trackers:
