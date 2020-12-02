@@ -26,6 +26,9 @@
 - name: EG Wohnen SD Tuer R
   address: '1/1/35'
   state_address: '1/4/35'
+- name: EG Klingel
+  address: '1/1/44'
+  state_address: '1/4/44'  
 - name: OG Kind I SD Fenster
   address: '1/1/61'
   state_address: '1/4/61'
