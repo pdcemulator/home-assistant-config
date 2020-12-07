@@ -58,6 +58,11 @@ cards:
         card:
           type: picture
           image: !secret url_meteogram_night
+      - type: weather-forecast
+        name: Gotha
+        entity: weather.dark_sky
+        secondary_info_attribute: humidity
+        show_forecast: true
       - type: entity-filter
         name: Fenster geöffnet
         entities:
@@ -73,6 +78,10 @@ cards:
         state_filter:
           - 'on'
   ## COLUMN 3 ##
-  - type: calendar
-    entities: !secret caldav_calendars
-    initial_view: listWeek
+  - type: vertical-stack
+    cards:
+      - type: markdown
+        content: <ha-icon icon="mdi:calendar-clock"></ha-icon> {{ as_timestamp(states('sensor.date_time_iso')) | timestamp_custom('%A %-m. %B, %H:%M') }} Uhr
+      - type: calendar
+        entities: !secret caldav_calendars
+        initial_view: listWeek
