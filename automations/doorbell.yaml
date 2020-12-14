@@ -1,0 +1,40 @@
+---
+
+# Notification on Sonos speaker when the doorbell is ringing
+- alias: doorbell notification
+  trigger:
+    - platform: state
+      entity_id: switch.eg_klingel
+      from: 'off'
+      to: 'on'
+  action:
+    - service: sonos.snapshot
+      entity_id:
+        - media_player.arbeiten
+        - media_player.bad
+        - media_player.kuche
+        - media_player.wohnen
+    - service: media_player.volume_set
+      data:
+        entity_id:
+          - media_player.arbeiten
+          - media_player.bad
+          - media_player.kuche
+          - media_player.wohnen
+        volume_level: 0.2
+    - service: media_player.play_media
+      data:
+        entity_id:
+          - media_player.arbeiten
+          - media_player.bad
+          - media_player.kuche
+          - media_player.wohnen
+        media_content_id: 'http://ha.home.local/local/doorbell.mp3'
+        media_content_type: music
+    - delay: 0:02
+    - service: sonos.restore
+      entity_id:
+        - media_player.arbeiten
+        - media_player.bad
+        - media_player.kuche
+        - media_player.wohnen
