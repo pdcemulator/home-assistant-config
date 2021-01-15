@@ -6,6 +6,7 @@ exclude:
   domains:
     - calendar
     - media_player
+    - time_date
     - sun
     - updater
     - weather
