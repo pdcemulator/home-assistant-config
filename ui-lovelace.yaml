@@ -2,7 +2,6 @@
 title: Home
 excluded_entities: null
 background: var(--background-image)
-resources: !include_dir_list lovelace/resources
 
 views:
   - !include lovelace/views/main.yaml
