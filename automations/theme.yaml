@@ -11,7 +11,7 @@
       entity_id: binary_sensor.tag_nacht
       to: 'off'
   action:
-    - service_template: frontend.set_theme
+    - service: frontend.set_theme
       data_template:
         name: >
           {% if states.binary_sensor.tag_nacht.state == "on" %}
