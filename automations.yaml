@@ -1,0 +1,25 @@
+- id: '1611045659988'
+  alias: Nachtlicht Garten
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.tuer_eg_wohnen_r
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: binary_sensor.tag_nacht
+    state: 'off'
+  action:
+  - service: light.turn_on
+    data:
+      entity_id:
+      - light.terasse_n
+      - light.terasse_w
+  - delay: 00:02:30
+  - service: light.turn_off
+    data:
+      entity_id:
+      - light.terasse_n
+      - light.terasse_w
+  mode: single

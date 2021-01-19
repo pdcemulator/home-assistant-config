@@ -1,4 +1,5 @@
-automation: !include_dir_merge_list automations
+automation manual: !include_dir_merge_list automations
+automation ui: !include automations.yaml
 
 binary_sensor: !include_dir_merge_list entities/binary_sensors
 
