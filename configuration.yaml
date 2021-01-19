@@ -125,6 +125,6 @@ webostv:
   host: !secret lgtv_ip
   name: TV Schlafen
 
-#zeroconf:
+zeroconf: ~
 
 #zone: !include_dir_list entities/zones
