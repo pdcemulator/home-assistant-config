@@ -55,6 +55,8 @@ http:
 
 # https://www.home-assistant.io/integrations/influxdb/
 influxdb:
+  api_version: 1
+  host: !secret influxdb_host
   include:
     domains:
       - binary_sensor
