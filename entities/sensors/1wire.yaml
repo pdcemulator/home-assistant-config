@@ -24,4 +24,3 @@
     "26.1CD2A4010000": Dach Aussen
   host: !secret onewire_host
   port: !secret onewire_port
-  scan_interval: 300
