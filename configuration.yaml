@@ -108,11 +108,6 @@ switch: !include_dir_merge_list entities/switches
 
 system_health:
 
-# https://www.home-assistant.io/integrations/google_translate/
-tts:
-  - platform: google_translate
-    language: 'de'
-
 # https://www.home-assistant.io/integrations/unifi/
 # Configure in Web UI, Configuration -> Integrations -> UniFi Controller
 
