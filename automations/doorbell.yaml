@@ -29,7 +29,7 @@
           - media_player.bad
           - media_player.kuche
           - media_player.wohnen
-        media_content_id: 'http://ha.home.local:8123/local/doorbell.mp3'
+        media_content_id: !secret url_doorbell_audio
         media_content_type: music
     - delay: 0:01
     - service: sonos.restore
