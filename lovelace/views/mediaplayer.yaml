@@ -8,5 +8,9 @@ cards:
     entity: media_player.wohnen
   - type: media-control
     entity: media_player.bad
+  - type: media-control
+    entity: media_player.wohnzimmer
+  - type: media-control
+    entity: media_player.schlafzimmer
 icon: 'mdi:music'
-title: Sonos
+title: Media
