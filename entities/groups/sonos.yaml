@@ -1,0 +1,7 @@
+---
+  sonos_speaker:
+    name: Sonos Speaker
+    entities:
+      - media_player.arbeiten
+      - media_player.bad
+      - media_player.kuche
