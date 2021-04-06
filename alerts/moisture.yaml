@@ -1,0 +1,28 @@
+# ---
+
+# - name: Feuchtigkeit HAR
+#   done_message: Alarm behoben
+#   entity_id: binary_sensor.shelly_leckage_har
+#   state: 'on'
+#   repeat: 30
+#   can_acknowledge: true
+#   skip_first: false
+#   notifiers: notify.mobile_app_fphone
+
+# - name: Feuchtigkeit K GS
+#   done_message: Alarm behoben
+#   entity_id: binary_sensor.shelly_leckage_kueche_gs
+#   state: 'on'
+#   repeat: 30
+#   can_acknowledge: true
+#   skip_first: false
+#   notifiers: notify.mobile_app_fphone
+
+# - name: Feuchtigkeit K Spuele
+#   done_message: Alarm behoben
+#   entity_id: binary_sensor.shelly_leckage_kueche_spuele
+#   state: 'on'
+#   repeat: 30
+#   can_acknowledge: true
+#   skip_first: false
+#   notifiers: notify.mobile_app_fphone

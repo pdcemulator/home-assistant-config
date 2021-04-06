@@ -1,0 +1,32 @@
+---
+
+  - alias: Alarm 
+    trigger:
+      - platform: state
+        entity_id:
+          - binary_sensor.shelly_leckage_har
+          - binary_sensor.shelly_leckage_kueche_gs
+          - binary_sensor.shelly_leckage_kueche_spuele
+        to: 'on'
+    action:
+      - service: notify.notify
+        data:
+          message: 'Entität: {{ trigger.entity_id }}, Status: {{ trigger.to_state.state }}'
+          title: 'Testalarm Feuchtigkeit'
+
+          # ---
+          #   - alias: Alarm 
+          #     trigger:
+          #       - platform: numeric_state
+          #         entity_id:
+          #           - sensor.shelly_batterie_har
+          #           # - sensor.shelly_batterie_kueche_gs
+          #           # - sensor.shelly_batterie_kueche_spuele
+          #         value_template: "{{ state.attributes.battery }}"
+          #         below: 50
+          #         attribute: attribute_name
+          #     action:
+          #       - service: notify.mobile_app_fphone
+          #         data:
+          #           message: 'Entität: {{ trigger.entity_id }}, Status: {{ trigger.to_state.state }}'
+          #           title: 'Testalarm Batterie'          
