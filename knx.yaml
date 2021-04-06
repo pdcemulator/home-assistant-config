@@ -7,9 +7,9 @@ tunneling:
   host: !secret knx_host
   port: !secret knx_port
   local_ip: !secret knx_local_ip
-  
-fire_event: true
-fire_event_filter: ['1/1/230', '1/2/230']
+
+individual_address: 1.0.250
+event_filter: ["1/1/33", "1/2/33", "1/1/230", "1/2/230"]
 
 binary_sensor: !include integrations/knx/binary_sensor.yaml
 cover: !include integrations/knx/cover.yaml
@@ -18,25 +18,35 @@ sensor: !include integrations/knx/sensor.yaml
 switch: !include integrations/knx/switch.yaml
 
 # KNX integration is able to expose time or sensor values to KNX bus.
-# The integration will broadcast any change of the exposed value to the 
+# The integration will broadcast any change of the exposed value to the
 # KNX bus and answer read requests to the specified group address
 #
 # https://www.home-assistant.io/integrations/knx/#exposing-sensor-values-or-time-to-knx-bus
 #
 expose:
+  # send hue light state to knx
+  - entity_id: light.eg_wohnen_hue
+    type: binary
+    address: "1/4/33"
+    default: false
+  - entity_id: light.eg_wohnen_hue
+    type: percent
+    address: "1/5/33"
+    attribute: "brightness"
+    default: 0
     # send Sonos values to KNX bus
   - entity_id: sensor.sonos_og_bad_volume
     type: percent
-    address: '1/5/230'
+    address: "1/5/230"
   - entity_id: sensor.sonos_og_bad_state
     type: binary
-    address: '1/4/230'
+    address: "1/4/230"
     # date and time
-  - type: 'date'
-    address: '5/0/0'
-  - type: 'time'
-    address: '5/0/1'
+  - type: "date"
+    address: "5/0/0"
+  - type: "time"
+    address: "5/0/1"
     # non knx sensors
   - entity_id: sensor.dach_aussen_temperature
     type: temperature
-    address: '5/3/40'
+    address: "5/3/40"

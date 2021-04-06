@@ -1,11 +1,10 @@
 ---
-
 - alias: Sonos OG Bad On
   trigger:
     platform: event
     event_type: knx_event
     event_data:
-      address: '1/1/230'
+      destination: "1/1/230"
       data: 1
   action:
     service: media_player.media_play
@@ -16,7 +15,7 @@
     platform: event
     event_type: knx_event
     event_data:
-      address: '1/1/230'
+      destination: "1/1/230"
       data: 0
   action:
     service: media_player.media_pause
@@ -27,7 +26,7 @@
     platform: event
     event_type: knx_event
     event_data:
-      address: '1/2/230'
+      destination: "1/2/230"
       data: 9
   action:
     - service: input_boolean.turn_off
@@ -40,7 +39,7 @@
     platform: event
     event_type: knx_event
     event_data:
-      address: '1/2/230'
+      destination: "1/2/230"
       data: 1
   action:
     - service: input_boolean.turn_off
@@ -53,7 +52,7 @@
     platform: event
     event_type: knx_event
     event_data:
-      address: '1/2/230'
+      destination: "1/2/230"
       data: 0
   action:
     service: input_boolean.turn_on
