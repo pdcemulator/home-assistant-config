@@ -1,0 +1,53 @@
+- alias: KNX to Hue EG Wohnen
+  description: ""
+  trigger:
+    - platform: event
+      event_type: knx_event
+      event_data:
+        destination: 1/1/33 # switch ga, 1.001
+    - platform: event
+      event_type: knx_event
+      event_data:
+        destination: 1/2/33 # dim step ga, 3.007
+  condition: []
+  action:
+    - choose:
+        - conditions: > # turn on
+            {{ trigger.event.data.destination=='1/1/33' and trigger.event.data.data == 1 }}
+          sequence:
+            - service: light.turn_on
+              data:
+                transition: 3
+                brightness_pct: 100
+              entity_id: light.eg_wohnen_hue
+        - conditions: > # turn off
+            {{ trigger.event.data.destination=='1/1/33' and trigger.event.data.data == 0 }}
+          sequence:
+            - service: light.turn_off
+              data:
+                transition: 3
+              entity_id: light.eg_wohnen_hue
+        - conditions: > # dim up
+            {{ trigger.event.data.destination=='1/2/33' and trigger.event.data.data == 9 }}
+          sequence:
+            - repeat:
+                count: "20"
+                sequence:
+                  - service: light.turn_on
+                    data:
+                      brightness_step_pct: 5
+                    entity_id: light.eg_wohnen_hue
+                  - delay: "00:00:00.25"
+        - conditions: > # dim down
+            {{ trigger.event.data.destination=='1/2/33' and trigger.event.data.data == 1}}
+          sequence:
+            - repeat:
+                count: "20"
+                sequence:
+                  - service: light.turn_on
+                    data:
+                      brightness_step_pct: -5
+                    entity_id: light.eg_wohnen_hue
+                  - delay: "00:00:00.25"
+      default: []
+  mode: restart

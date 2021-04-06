@@ -9,6 +9,7 @@ cards:
       - light.eg_kueche_schrank
       - light.eg_essen
       - light.eg_wohnen
+      - light.eg_wohnen_hue
       - light.eg_flur
     title: EG
     type: entities
@@ -39,5 +40,5 @@ cards:
       - light.schuppen
     title: Außen
     type: entities
-icon: 'mdi:lightbulb'
+icon: "mdi:lightbulb"
 title: Licht

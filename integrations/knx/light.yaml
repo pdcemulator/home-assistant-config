@@ -1,110 +1,110 @@
 ---
-- name: EG HAR  
-  address: '1/1/0'
-  state_address: '1/4/0'
+- name: EG HAR
+  address: "1/1/0"
+  state_address: "1/4/0"
 - name: EG Bad
-  address: '1/1/6'
-  brightness_address: '1/3/6'
-  state_address: '1/4/6'
-  brightness_state_address: '1/5/6'
-- name: EG Bad Spiegel 
-  address: '1/1/9'
-  state_address: '1/4/9'
+  address: "1/1/6"
+  brightness_address: "1/3/6"
+  state_address: "1/4/6"
+  brightness_state_address: "1/5/6"
+- name: EG Bad Spiegel
+  address: "1/1/9"
+  state_address: "1/4/9"
 - name: EG Arbeiten
-  address: '1/1/12'
-  brightness_address: '1/3/12'
-  state_address: '1/4/12'
-  brightness_state_address: '1/5/12'
+  address: "1/1/12"
+  brightness_address: "1/3/12"
+  state_address: "1/4/12"
+  brightness_state_address: "1/5/12"
 - name: EG Kueche
-  address: '1/1/18'
-  brightness_address: '1/3/18'
-  state_address: '1/4/18'
-  brightness_state_address: '1/5/18'
-- name: EG Kueche Schrank 
-  address: '1/1/21'
-  state_address: '1/4/21'
-- name: EG Essen 
-  address: '1/1/28'
-  state_address: '1/4/28'
-- name: EG Wohnen
-  address: '1/1/33'
-  state_address: '1/4/33'
+  address: "1/1/18"
+  brightness_address: "1/3/18"
+  state_address: "1/4/18"
+  brightness_state_address: "1/5/18"
+- name: EG Kueche Schrank
+  address: "1/1/21"
+  state_address: "1/4/21"
+- name: EG Essen
+  address: "1/1/28"
+  state_address: "1/4/28"
+#- name: EG Wohnen
+#  address: '1/1/33'
+#  state_address: '1/4/33'
 - name: EG Flur
-  address: '1/1/39'
-  brightness_address: '1/3/39'
-  state_address: '1/4/39'
-  brightness_state_address: '1/5/39'
+  address: "1/1/39"
+  brightness_address: "1/3/39"
+  state_address: "1/4/39"
+  brightness_state_address: "1/5/39"
 - name: OG Kind I
-  address: '1/1/60'
-  brightness_address: '1/3/60'
-  state_address: '1/4/60'
-  brightness_state_address: '1/5/60'
+  address: "1/1/60"
+  brightness_address: "1/3/60"
+  state_address: "1/4/60"
+  brightness_state_address: "1/5/60"
 - name: OG Kind II
-  address: '1/1/66'
-  brightness_address: '1/3/66'
-  state_address: '1/4/66'
-  brightness_state_address: '1/5/66'
+  address: "1/1/66"
+  brightness_address: "1/3/66"
+  state_address: "1/4/66"
+  brightness_state_address: "1/5/66"
 - name: OG Bad
-  address: '1/1/74'
-  brightness_address: '1/3/74'
-  state_address: '1/4/74'
-  brightness_state_address: '1/5/74'
+  address: "1/1/74"
+  brightness_address: "1/3/74"
+  state_address: "1/4/74"
+  brightness_state_address: "1/5/74"
 - name: OG Bad Dusche
-  address: '1/1/72'
-  brightness_address: '1/3/72'
-  state_address: '1/4/72'
-  brightness_state_address: '1/5/72'
+  address: "1/1/72"
+  brightness_address: "1/3/72"
+  state_address: "1/4/72"
+  brightness_state_address: "1/5/72"
 - name: OG Bad Spiegel
-  address: '1/1/78'
-  state_address: '1/4/78'
+  address: "1/1/78"
+  state_address: "1/4/78"
 - name: OG Ankleide
-  address: '1/1/80'
-  brightness_address: '1/3/80'
-  state_address: '1/4/80'
-  brightness_state_address: '1/5/80'
+  address: "1/1/80"
+  brightness_address: "1/3/80"
+  state_address: "1/4/80"
+  brightness_state_address: "1/5/80"
 - name: OG Schlafen
-  address: '1/1/85'
-  brightness_address: '1/3/85'
-  state_address: '1/4/85'
-  brightness_state_address: '1/5/85'
+  address: "1/1/85"
+  brightness_address: "1/3/85"
+  state_address: "1/4/85"
+  brightness_state_address: "1/5/85"
 - name: OG Schlafen TV
-  address: '1/1/89'
-  state_address: '1/4/89'
+  address: "1/1/89"
+  state_address: "1/4/89"
 - name: OG Flur
-  address: '1/1/91'
-  brightness_address: '1/3/91'
-  state_address: '1/4/91'
-  brightness_state_address: '1/5/91'
+  address: "1/1/91"
+  brightness_address: "1/3/91"
+  state_address: "1/4/91"
+  brightness_state_address: "1/5/91"
 - name: OG Treppe
-  address: '1/1/92'
-  brightness_address: '1/3/92'
-  state_address: '1/4/92'
-  brightness_state_address: '1/5/92'
+  address: "1/1/92"
+  brightness_address: "1/3/92"
+  state_address: "1/4/92"
+  brightness_state_address: "1/5/92"
 - name: Dach
-  address: '1/1/111'
-  state_address: '1/4/111'
+  address: "1/1/111"
+  state_address: "1/4/111"
 - name: Eingang
-  address: '1/1/150'
-  state_address: '1/4/150'
+  address: "1/1/150"
+  state_address: "1/4/150"
 - name: Terasse W
-  address: '1/1/152'
-  state_address: '1/4/152'
+  address: "1/1/152"
+  state_address: "1/4/152"
 - name: Terasse N
-  address: '1/1/153'
-  state_address: '1/4/153'
+  address: "1/1/153"
+  state_address: "1/4/153"
 - name: Eingang A
-  address: '1/1/154'
-  state_address: '1/4/154'
+  address: "1/1/154"
+  state_address: "1/4/154"
 - name: Eingang B
-  address: '1/1/155'
-  state_address: '1/4/155'
+  address: "1/1/155"
+  state_address: "1/4/155"
 - name: Carport
-  address: '1/1/160'
-  brightness_address: '1/3/160'
-  state_address: '1/4/160'
-  brightness_state_address: '1/5/160'
+  address: "1/1/160"
+  brightness_address: "1/3/160"
+  state_address: "1/4/160"
+  brightness_state_address: "1/5/160"
 - name: Schuppen
-  address: '1/1/161'
-  brightness_address: '1/3/161'
-  state_address: '1/4/161'
-  brightness_state_address: '1/5/161'
+  address: "1/1/161"
+  brightness_address: "1/3/161"
+  state_address: "1/4/161"
+  brightness_state_address: "1/5/161"
