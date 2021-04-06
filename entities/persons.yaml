@@ -9,6 +9,6 @@
 - name: Mama
   id: person_mama
   device_trackers:
-    - device_tracker.huaweip20
+    - device_tracker.pixel4a
 - name: Gast
   id: person_gast
